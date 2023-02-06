@@ -1,0 +1,42 @@
+$base-vw: (
+  "destock": 1440px,
+  "mobile": 456px
+) !default;
+
+
+$breakpoints: (
+  "mobile": 576,
+  "tablet": 768,
+  "destock": 1200
+) !default;
+
+// CONVERT PX TO VW
+
+@function get-vw($px-vw, $view: 'destock')   {
+    @return ($px-vw * 100vw) / map-get($base-vw, $view)
+};
+
+// RESPONSIVE
+
+@mixin responsive($breakpoint: "mobile", $type: "min") {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @if $type == "min" {
+      @media (min-width: map-get($breakpoints, $breakpoint) + "px") {
+        @content;
+      }
+    } @else {
+      @media (max-width: map-get($breakpoints, $breakpoint) - 1 + "px") {
+        @content;
+      }
+    }
+  }
+};
+
+// CENTER
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @content;
+};
