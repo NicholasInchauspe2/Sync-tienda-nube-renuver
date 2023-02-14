@@ -1,12 +1,13 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import { Inter } from '@next/font/google';
-import Button from '@/components/Button';
-import Layout from '@/components/Layout';
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "@next/font/google";
+import Button from "@/commons/Button";
+import Layout from "@/components/Layout";
+import { FC } from "react";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
-const Home = () => {
+const Home: FC = () => {
   return (
     <>
       <Head>
@@ -15,8 +16,7 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout >
-        
+      <Layout>
         <Image
           src="/vercel.svg"
           alt="Vercel Logo"
@@ -25,10 +25,9 @@ const Home = () => {
           priority
         />
         <Button>Pruebs</Button>
-            
       </Layout>
     </>
-  )
+  );
 };
 
 export default Home;

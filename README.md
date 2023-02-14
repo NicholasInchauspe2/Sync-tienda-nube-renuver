@@ -10,7 +10,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-# Rules
+# Code format
+
+- Prettier
 
 ## Technology
 
@@ -18,11 +20,11 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - We'll use SSG for the pages that can be static like frequently question, blog post and data about the business
 - Axios to fetch data
 - If we can we should use lazy loading to show the images
+- Redux Toolkit for states management
 
 ## Styles
 
-- CSS Modules
-- SASS
+- SCSS Modules
 - Mobile First
 - BEM methodology
   - [Naming Convention](https://en.bem.info/methodology/naming-convention/)
@@ -30,12 +32,19 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
     - [Block](https://en.bem.info/methodology/quick-start/#block)
     - [Element](https://en.bem.info/methodology/quick-start/#element)
     - [Modifier](https://en.bem.info/methodology/quick-start/#modifier)
+- We use \*vw\*\* measure to guarantee responsiveness, for this we have the get-vw function that will transform px to vw.
 
 # Architecture
 
 ## Commons
 
+Common components are created once and reused many times in different contexts or in another components.
+
+- Button
+
 ## Components
+
+- Layout
 
 ## Constants
 
@@ -44,3 +53,14 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 ## Services
 
 ## Styes
+
+- SCSS variables, mixin and fucntions in `src/styles`
+
+## Types
+
+- common interfaces in `src/types`
+- specific interfaces in the component folder. Must be exported.
+
+## Utils
+
+- common functions in `src/utils`
