@@ -1,12 +1,15 @@
-import React from 'react';
-import styles from './menu.module.scss';
+import React, { FC } from "react";
+import styles from "./menu.module.scss";
 
-const Menu = ({ isOpen, handleClick }) => {
+interface IMenu {
+  isOpen: boolean;
+  handleClick: () => void;
+}
 
+const Menu: FC<IMenu> = ({ isOpen, handleClick }: IMenu) => {
   return (
-    <div className={`${isOpen ? "slideIn" : "slideOut"} ${styles.menu}`} >
+    <div className={`${isOpen ? "slideIn" : "slideOut"} ${styles.menu}`}>
       <div onClick={handleClick}>x</div>
-      
     </div>
   );
 };

@@ -1,5 +1,5 @@
 $base-vw: (
-  "destock": 1440px,
+  "desktop": 1440px,
   "mobile": 456px
 ) !default;
 
@@ -7,12 +7,12 @@ $base-vw: (
 $breakpoints: (
   "mobile": 576,
   "tablet": 768,
-  "destock": 1200
+  "desktop": 1200
 ) !default;
 
 // CONVERT PX TO VW
 
-@function get-vw($px-vw, $view: 'destock')   {
+@function get-vw($px-vw, $view: 'desktop')   {
     @return ($px-vw * 100vw) / map-get($base-vw, $view)
 };
 
