@@ -1,0 +1,36 @@
+@import './variables.scss';
+@import './funtions.scss';
+
+html {
+	line-height: 1;
+	-webkit-text-size-adjust: 100%;
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p,
+pre,
+blockquote,
+figure,
+hr {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #fff;
+	font-family: $primary-font;
+	-webkit-font-smoothing: antialiased;
+	margin: 0;
+}
