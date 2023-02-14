@@ -1,13 +1,14 @@
 import React from 'react';
+import Div100vh from "react-div-100vh";
 import styles from './menu.module.scss';
 
 const Menu = ({ isOpen, handleClick }) => {
 
   return (
-    <div className={`${isOpen ? "slideIn" : "slideOut"} ${styles.menu}`} >
-      <div onClick={handleClick}>x</div>
+    <Div100vh className={`${isOpen ? styles.slideIn : styles.slideOut} ${styles.menu}`} >
       
-    </div>
+      
+    </Div100vh>
   );
 };
 

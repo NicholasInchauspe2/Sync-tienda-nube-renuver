@@ -3,9 +3,41 @@
     display: block;
     overflow: scroll;
     z-index: 100;
+    width: 200px;
+    height: 100vh;
+    background-color: rgb(94, 82, 82);
+    
 
     @include responsive() {
         display: none;
     }
 
+}
+
+.slideIn {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+    position: fixed !important;
+    width: 60vw;
+    min-height: 100vh;
+    top: 0px;
+    right: 0px;
+    z-index: 10;
+}
+
+.slideOut {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-transition: all 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    transition: all 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    position: fixed !important;
+    width: 60vw;
+    min-height: 100vh;
+    top: 0px;
+    right: -20px;
+    z-index: 1;
 }

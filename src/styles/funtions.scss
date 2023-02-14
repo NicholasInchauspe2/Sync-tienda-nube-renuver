@@ -12,7 +12,7 @@ $breakpoints: (
 
 // CONVERT PX TO VW
 
-@function get-vw($px-vw, $view: 'destock')   {
+@function get-vw($px-vw, $view: 'mobile')   {
     @return ($px-vw * 100vw) / map-get($base-vw, $view)
 };
 

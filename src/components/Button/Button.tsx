@@ -1,9 +1,9 @@
-import { Props } from '@/types';
+import { Button } from '@/types';
 import styles from './button.module.scss';
 
-const Button = ({ children, ...rest } : Props) => {
+const Button = ({ children, type, ...rest } : Button) => {
     return (
-        <button className={styles.button}>
+        <button className={`${styles.button} ${styles[type]}`} {...rest}>
             {children}
         </button>
     )

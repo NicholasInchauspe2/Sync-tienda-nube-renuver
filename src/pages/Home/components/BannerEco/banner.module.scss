@@ -1,0 +1,84 @@
+@import '@/styles/commons.scss';
+
+#container {
+    position: relative;
+    height: get-vw(276px);
+    margin-bottom: get-vw(35px);
+
+    @include responsive() {
+        height: get-vw(500px, 'destock');
+        margin: 0;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+        padding: get-vw(35px);
+        background-color: rgba(75, 183, 71, 0.1);;
+
+        @include responsive() {
+            padding: get-vw(96px, 'destock') get-vw(120px, 'destock');
+            height: get-vw(414px, 'destock');
+        }
+    }
+
+    .image {
+        position: absolute;
+        width: get-vw(114px);
+        height: get-vw(200px);
+        bottom: 0;
+        right: get-vw(26px);
+
+        @include responsive() {
+            width: get-vw(282px, 'destock');
+            height: get-vw(495px, 'destock');
+            right: get-vw(120px, 'destock');
+        }
+    }
+
+    .imageEnergy {
+        width: get-vw(27px);
+        height: get-vw(27px);
+        margin-bottom: get-vw(10px);
+        position: relative;
+
+        @include responsive() {
+            width: get-vw(48px, 'destock');
+            height: get-vw(48px, 'destock');
+            margin-bottom: get-vw(25px, 'destock');
+        }
+    }
+
+    .info {
+        width: get-vw(225px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+
+        @include responsive() {
+            width: get-vw(800px, 'destock');
+        }
+        h3 {
+            font-size: get-vw(20px);
+            line-height: get-vw(26px);
+            font-weight: normal;
+            color: $color-tertiary;
+            margin-bottom: 0;
+    
+            @include responsive() {
+                font-size: get-vw(40px, 'destock');
+                line-height: get-vw(50px, 'destock');
+            }
+
+            span {
+                color: $color-primary;
+                font-weight: bold;
+            }
+        }
+    }
+}

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Props } from '@/types';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import styles from './layout.module.scss';
+
 
 const Layout = ({ children } : Props) => {
 

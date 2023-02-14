@@ -1,0 +1,98 @@
+@import '@/styles/commons.scss';
+
+#container {
+    position: relative;
+    padding: get-vw(53px) get-vw(67px);
+
+    @include flexCenter() {
+        flex-direction: column;
+        padding: get-vw(53px) get-vw(67px);
+    }
+
+    @include responsive() {
+        padding: get-vw(130px, 'destock') get-vw(137px, 'destock') get-vw(50px, 'destock') get-vw(137px, 'destock');
+    }
+
+    h2 {
+        font-size: get-vw(25px);
+        line-height: get-vw(30px);
+        font-weight: bold;
+        color: $color-tertiary;
+        margin-bottom: get-vw(43px);
+        text-align: center;
+
+        @include responsive() {
+            font-size: get-vw(40px, 'destock');
+            line-height: get-vw(47px, 'destock');
+            margin-bottom: get-vw(45px, 'destock');
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: get-vw(45px);
+
+        @include responsive() {
+            margin-bottom: get-vw(80px, 'destock');
+            width: 100%;
+        }
+
+        .card {
+            @include flexCenter() {
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+            width: get-vw(150px);
+            text-align: center;
+            margin-bottom: get-vw(15px);
+
+            @include responsive() {
+                width: get-vw(275px, 'destock');
+                margin-bottom: 0;
+            }
+
+            .image {
+                position: relative;
+                width: get-vw(35px);
+                height: get-vw(35px);
+                margin-bottom: get-vw(15px);
+        
+                @include responsive() {
+                    width: get-vw(55px, 'destock');
+                    height: get-vw(55px, 'destock');
+                    margin-bottom: get-vw(38px, 'destock');
+                }
+            }
+            h3 {
+                font-size: get-vw(12px);
+                line-height: get-vw(16px);
+                font-weight: 600;
+                color: $color-tertiary;
+                margin-bottom: get-vw(6px);
+                height: get-vw(28px);
+                @include flexCenter();
+        
+                @include responsive() {
+                    font-size: get-vw(20px, 'destock');
+                    line-height: get-vw(23px, 'destock');
+                    margin-bottom: get-vw(16px, 'destock');
+                    height: auto;
+                }
+            }
+
+            p {
+                font-size: get-vw(12px);
+                line-height: get-vw(14px);
+                font-weight: 400;
+                color: $color-quaternary;
+        
+                @include responsive() {
+                    font-size: get-vw(20px, 'destock');
+                    line-height: get-vw(24px, 'destock');
+                }
+            }
+        }
+    }
+}

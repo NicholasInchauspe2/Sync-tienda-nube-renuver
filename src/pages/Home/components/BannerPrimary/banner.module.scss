@@ -1,0 +1,64 @@
+@import '@/styles/commons.scss';
+
+#container {
+    background: $color-primary;
+    height: get-vw(400px);
+    position: relative;
+    padding: get-vw(15px) get-vw(28px);
+
+    @include responsive() {
+        padding: get-vw(90px, 'destock') get-vw(120px, 'destock');
+        height: get-vw(520px, 'destock');
+    }
+
+    .image {
+        position: absolute;
+        bottom: 0;
+        right: get-vw(18px);
+        width: get-vw(167px);
+        height: get-vw(274px);
+
+        @include responsive() {
+            right: get-vw(111px, 'destock');
+            width: get-vw(314px, 'destock');
+            height: get-vw(516px, 'destock');
+        }
+    }
+
+    h1 {
+        font-size: get-vw(25px);
+        line-height: get-vw(50px);
+        font-weight: bold;
+        color: white;
+        margin-bottom: get-vw(17px);
+
+        @include responsive() {
+            font-size: get-vw(40px, 'destock');
+            line-height: get-vw(50px, 'destock');
+            margin-bottom: get-vw(23px, 'destock');
+        }
+    }
+
+    p {
+        width: get-vw(240px);
+        color: white;
+        font-size: get-vw(16px);
+        line-height: get-vw(35px);
+        margin-bottom: get-vw(40px);
+
+        @include responsive() {
+            width: get-vw(690px, 'destock');
+            font-size: get-vw(20px, 'destock');
+            line-height: get-vw(35px, 'destock');
+            margin-bottom: get-vw(35px, 'destock');
+        }
+    }
+
+    button {
+        margin-left: get-vw(50px);
+
+        @include responsive() {
+            margin: 0;
+        }
+    }
+}
