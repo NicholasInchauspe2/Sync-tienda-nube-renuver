@@ -4,7 +4,7 @@
     display: flex;
 
     @include responsive() {
-        width: get-vw(730px, 'destock');
+        width: get-vw(730px, 'desktop');
         width: auto;
     }
 }
@@ -20,13 +20,13 @@
         border: 0;
         border-radius: get-vw(10px) 0 0 get-vw(10px);
         padding-left: get-vw(17px);
-        outline: none;
         ::placeholder {
             color: $color-grey-light;
         }
         font-size: get-vw(16px);
         line-height: get-vw(19px);
     }
+    
     button {
         width: 12%;
         border-radius: 0 get-vw(10px) get-vw(10px) 0;
@@ -52,49 +52,49 @@
             display: block;
             content: '';
             position: absolute;
-            height: get-vw(12.5px, 'destock');
-            border: get-vw(1px, 'destock') solid $color-grey-light;
-            top: get-vw(15.5px, 'destock');
-            left: get-vw(170px, 'destock');
+            height: get-vw(12.5px, 'desktop');
+            border: get-vw(1px, 'desktop') solid $color-grey-light;
+            top: get-vw(15.5px, 'desktop');
+            left: get-vw(170px, 'desktop');
         }
     }
 
    
     select {
         border: none;
-        border-radius: get-vw(14px, 'destock') 0 0 get-vw(14px, 'destock');
+        border-radius: get-vw(14px, 'desktop') 0 0 get-vw(14px, 'desktop');
         background: white;
-        width: get-vw(170px, 'destock');
-        height: get-vw(45px, 'destock');
-        font-size: get-vw(14px, 'destock');
-        line-height: get-vw(17px, 'destock');
+        width: get-vw(170px, 'desktop');
+        height: get-vw(45px, 'desktop');
+        font-size: get-vw(14px, 'desktop');
+        line-height: get-vw(17px, 'desktop');
         text-align-last: center;
-        border-right: get-vw(14px, 'destock') solid transparent;
+        border-right: get-vw(14px, 'desktop') solid transparent;
     }
 
     input {
-        width: get-vw(495px, 'destock');
-        height: get-vw(45px, 'destock');
+        width: get-vw(495px, 'desktop');
+        height: get-vw(45px, 'desktop');
         border-radius: 0;
         border: none;
-        padding-left: get-vw(12px, 'destock');
+        padding-left: get-vw(12px, 'desktop');
         ::placeholder {
             color: $color-grey-light;
         }
-        font-size: get-vw(14px, 'destock');
-        line-height: get-vw(16px, 'destock');
+        font-size: get-vw(14px, 'desktop');
+        line-height: get-vw(16px, 'desktop');
     }
     button {
-        width: get-vw(53px, 'destock');
-        height: get-vw(45px, 'destock');
-        border-radius: 0 get-vw(14px, 'destock') get-vw(14px, 'destock') 0;
+        width: get-vw(53px, 'desktop');
+        height: get-vw(45px, 'desktop');
+        border-radius: 0 get-vw(14px, 'desktop') get-vw(14px, 'desktop') 0;
         background-color: black;
         border: 0;
         @include flexCenter;
         .logoContainer {
             position: relative;
-            width: get-vw(24px, 'destock');
-            height: get-vw(24px, 'destock');
+            width: get-vw(24px, 'desktop');
+            height: get-vw(24px, 'desktop');
         }
     }
 }

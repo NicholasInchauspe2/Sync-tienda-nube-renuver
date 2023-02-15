@@ -1,0 +1,98 @@
+@import '@/styles/commons.scss';
+
+#container {
+    position: relative;
+    padding: get-vw(53px) get-vw(67px);
+
+    @include flexCenter() {
+        flex-direction: column;
+        padding: get-vw(53px) get-vw(67px);
+    }
+
+    @include responsive() {
+        padding: get-vw(130px, 'desktop') get-vw(137px, 'desktop') get-vw(50px, 'desktop') get-vw(137px, 'desktop');
+    }
+
+    h2 {
+        font-size: get-vw(25px);
+        line-height: get-vw(30px);
+        font-weight: bold;
+        color: $color-tertiary;
+        margin-bottom: get-vw(43px);
+        text-align: center;
+
+        @include responsive() {
+            font-size: get-vw(40px, 'desktop');
+            line-height: get-vw(47px, 'desktop');
+            margin-bottom: get-vw(45px, 'desktop');
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: get-vw(45px);
+
+        @include responsive() {
+            margin-bottom: get-vw(80px, 'desktop');
+            width: 100%;
+        }
+
+        .card {
+            @include flexCenter() {
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+            width: get-vw(150px);
+            text-align: center;
+            margin-bottom: get-vw(15px);
+
+            @include responsive() {
+                width: get-vw(275px, 'desktop');
+                margin-bottom: 0;
+            }
+
+            .image {
+                position: relative;
+                width: get-vw(35px);
+                height: get-vw(35px);
+                margin-bottom: get-vw(15px);
+        
+                @include responsive() {
+                    width: get-vw(55px, 'desktop');
+                    height: get-vw(55px, 'desktop');
+                    margin-bottom: get-vw(38px, 'desktop');
+                }
+            }
+            h3 {
+                font-size: get-vw(12px);
+                line-height: get-vw(16px);
+                font-weight: 600;
+                color: $color-tertiary;
+                margin-bottom: get-vw(6px);
+                height: get-vw(28px);
+                @include flexCenter();
+        
+                @include responsive() {
+                    font-size: get-vw(20px, 'desktop');
+                    line-height: get-vw(23px, 'desktop');
+                    margin-bottom: get-vw(16px, 'desktop');
+                    height: auto;
+                }
+            }
+
+            p {
+                font-size: get-vw(12px);
+                line-height: get-vw(14px);
+                font-weight: 400;
+                color: $color-quaternary;
+        
+                @include responsive() {
+                    font-size: get-vw(20px, 'desktop');
+                    line-height: get-vw(24px, 'desktop');
+                }
+            }
+        }
+    }
+}

@@ -1,12 +1,11 @@
-import React from 'react';
-import BannerPrimary from './components/BannerPrimary';
-import BannerReasons from './components/BannerReasons';
-import BannerSteps from './components/BannerSteps';
-import BannerOpinion from './components/BannerOpinion';
-import BannerEco from './components/BannerEco';
+import React from "react";
+import BannerPrimary from "./BannerPrimary";
+import BannerReasons from "./BannerReasons";
+import BannerSteps from "./BannerSteps";
+import BannerOpinion from "./BannerOpinion";
+import BannerEco from "./BannerEco";
 
 const Home = () => {
-
   return (
     <>
       <BannerPrimary />
