@@ -9,7 +9,7 @@
     gap: get-vw(22px);
 
     @include responsive() {
-        padding: get-vw(30px, 'desktop') get-vw(120px,'desktop');
+        padding: get-vw(20px, 'desktop') get-vw(120px,'desktop');
     }
 
     .section1 {

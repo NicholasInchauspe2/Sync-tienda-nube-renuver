@@ -5,6 +5,7 @@ const addPath = (e: { [key: string]: string }, path: string) => {
 };
 
 export enum Icons {
+  APPLE_ICON = "apple-touch-icon.svg",
   ENERGY1 = "energy1.svg",
   ENERGY2 = "energy2.svg",
   FACEBOOK = "facebook.svg",
@@ -16,6 +17,7 @@ export enum Icons {
   SHIELD = "shield.svg",
   TWITTER = "twitter.svg",
   VERIFIED = "verified.svg",
+  FAVICON = "favicon.svg",
 }
 addPath(Icons, "/icons");
 
