@@ -1,4 +1,4 @@
 export enum API {
-  baseURL = "https://furbi-api.herokuapp.com",
+  baseURL = "https://renuver-api.herokuapp.com",
   cellphones = "/",
 }

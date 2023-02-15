@@ -5,11 +5,11 @@ import styles from "./layout.module.scss";
 
 const Layout: FC<PropsWithChildren> = ({ children }: PropsWithChildren) => {
   return (
-    <main id={styles.main}>
+    <>
       <Navbar />
-      <div>{children}</div>
+      <main id={styles.main}>{children}</main>
       <Footer />
-    </main>
+    </>
   );
 };
 

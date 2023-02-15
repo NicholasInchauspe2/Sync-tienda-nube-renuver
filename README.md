@@ -21,6 +21,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - Axios to fetch data
 - If we can we should use lazy loading to show the images
 - Redux Toolkit for states management
+- We use [Next SEO](https://github.com/garmeeh/next-seo) to managing SEO
 
 ## Styles
 
