@@ -1,5 +1,32 @@
 @import '@/styles/commons.scss';
 
 .button {
-    background-color: $color-primary;
+    background-color: $color-tertiary;
+    border-radius: get-vw(96px);
+    padding: get-vw(12px) get-vw(24px);
+    border: none;
+    color: $color-white;
+    font-weight: 600;
+    font-size: get-vw(13px);
+    line-height: get-vw(15px);
+    
+    @include responsive() {
+        border-radius: get-vw(128px, 'desktop');
+        padding: get-vw(16px, 'desktop') get-vw(32px, 'desktop');
+        font-size: get-vw(18px, 'desktop');
+        line-height: get-vw(21px, 'desktop');
+    }
+}
+
+
+.secundary {
+    background: transparent;
+    padding: get-vw(10px) get-vw(8px);
+    border: get-vw(2px) solid $color-primary;
+    color: $color-primary;
+
+    @include responsive() {
+        padding: get-vw(17px, 'desktop');
+        border-width: get-vw(2px, 'desktop');
+    }
 }

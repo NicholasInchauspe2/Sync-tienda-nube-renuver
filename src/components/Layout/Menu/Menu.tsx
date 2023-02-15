@@ -1,5 +1,6 @@
 import React, { FC } from "react";
-import styles from "./menu.module.scss";
+import Div100vh from "react-div-100vh";
+import styles from './menu.module.scss';
 
 interface IMenu {
   isOpen: boolean;
@@ -8,9 +9,10 @@ interface IMenu {
 
 const Menu: FC<IMenu> = ({ isOpen, handleClick }: IMenu) => {
   return (
-    <div className={`${isOpen ? "slideIn" : "slideOut"} ${styles.menu}`}>
-      <div onClick={handleClick}>x</div>
-    </div>
+    <Div100vh className={`${isOpen ? styles.slideIn : styles.slideOut} ${styles.menu}`} >
+      
+      
+    </Div100vh>
   );
 };
 

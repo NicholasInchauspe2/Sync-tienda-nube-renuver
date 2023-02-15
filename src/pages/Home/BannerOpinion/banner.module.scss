@@ -1,0 +1,114 @@
+@import '@/styles/commons.scss';
+
+#container {
+    position: relative;
+    padding: get-vw(25px) get-vw(15px);
+
+    @include responsive() {
+        padding: get-vw(25px, 'desktop') get-vw(115px, 'desktop');
+    }
+
+    h2 {
+        font-size: get-vw(25px);
+        line-height: get-vw(30px);
+        font-weight: bold;
+        color: $color-tertiary;
+        margin-bottom: 0;
+        text-align: center;
+
+        @include responsive() {
+            font-size: get-vw(40px, 'desktop');
+            line-height: get-vw(47px, 'desktop');
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        padding-top: get-vw(35px);
+        padding-bottom: get-vw(60px);
+
+        @include responsive() {
+            padding-top: 0;
+            padding-bottom: get-vw(138px, 'desktop');
+    
+        }
+    }
+
+    .image {
+        position: relative;
+        width: get-vw(172px);
+        height: get-vw(210px);
+
+        @include responsive() {
+            width: get-vw(369px, 'desktop');
+            height: get-vw(449px, 'desktop');
+        }
+    }
+
+    .info {
+        width: get-vw(225px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+
+        @include responsive() {
+            width: get-vw(800px, 'desktop');
+        }
+        h3 {
+            font-size: get-vw(20px);
+            line-height: get-vw(23px);
+            font-weight: normal;
+            color: $color-tertiary;
+            margin-bottom: get-vw(30px);
+    
+            @include responsive() {
+                font-size: get-vw(40px, 'desktop');
+                line-height: get-vw(50px, 'desktop');
+                margin-bottom: get-vw(27px, 'desktop');
+            }
+
+            span {
+                font-family: 'Palanquin', sans-serif;
+            }
+        }
+
+        .quote {
+            font-size: get-vw(71px);
+            line-height: get-vw(86px);
+            font-weight: 400;
+            font-family: 'Palanquin', sans-serif;
+
+            @include responsive() {
+                font-size: get-vw(150px, 'desktop');
+                line-height: get-vw(20px, 'desktop');
+            }
+        }
+
+        p {
+            font-size: get-vw(12px);
+            line-height: get-vw(14px);
+            font-weight: 400;
+
+            &:last-child {
+                color: $color-quaternary;
+            }
+    
+            @include responsive() {
+                font-size: get-vw(24px, 'desktop');
+                line-height: get-vw(28px, 'desktop');
+                margin-bottom: get-vw(6px, 'desktop');;
+
+                &:last-child {
+                    font-size: get-vw(18px, 'desktop');
+                    line-height: get-vw(21px, 'desktop');
+                }
+            }
+        }
+    
+    }
+}

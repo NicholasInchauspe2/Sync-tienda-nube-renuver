@@ -1,0 +1,100 @@
+@import '@/styles/commons.scss';
+.container {
+    width: 100%;
+    display: flex;
+
+    @include responsive() {
+        width: get-vw(730px, 'desktop');
+        width: auto;
+    }
+}
+
+.primary {
+    select {
+        display: none;
+    }
+
+    input {
+        width: 88%;
+        height: get-vw(43px);
+        border: 0;
+        border-radius: get-vw(10px) 0 0 get-vw(10px);
+        padding-left: get-vw(17px);
+        ::placeholder {
+            color: $color-grey-light;
+        }
+        font-size: get-vw(16px);
+        line-height: get-vw(19px);
+    }
+    
+    button {
+        width: 12%;
+        border-radius: 0 get-vw(10px) get-vw(10px) 0;
+        background-color: black;
+        height: get-vw(43px);
+        border: 0;
+        @include flexCenter;
+        .logoContainer {
+            position: relative;
+            width: get-vw(23px);
+            height: get-vw(23px);
+        }
+    }
+}
+
+.secundary {
+    display: none;
+    @include responsive() {
+        display: flex;
+        position: relative;
+
+        &::before {
+            display: block;
+            content: '';
+            position: absolute;
+            height: get-vw(12.5px, 'desktop');
+            border: get-vw(1px, 'desktop') solid $color-grey-light;
+            top: get-vw(15.5px, 'desktop');
+            left: get-vw(170px, 'desktop');
+        }
+    }
+
+   
+    select {
+        border: none;
+        border-radius: get-vw(14px, 'desktop') 0 0 get-vw(14px, 'desktop');
+        background: white;
+        width: get-vw(170px, 'desktop');
+        height: get-vw(45px, 'desktop');
+        font-size: get-vw(14px, 'desktop');
+        line-height: get-vw(17px, 'desktop');
+        text-align-last: center;
+        border-right: get-vw(14px, 'desktop') solid transparent;
+    }
+
+    input {
+        width: get-vw(495px, 'desktop');
+        height: get-vw(45px, 'desktop');
+        border-radius: 0;
+        border: none;
+        padding-left: get-vw(12px, 'desktop');
+        ::placeholder {
+            color: $color-grey-light;
+        }
+        font-size: get-vw(14px, 'desktop');
+        line-height: get-vw(16px, 'desktop');
+    }
+    button {
+        width: get-vw(53px, 'desktop');
+        height: get-vw(45px, 'desktop');
+        border-radius: 0 get-vw(14px, 'desktop') get-vw(14px, 'desktop') 0;
+        background-color: black;
+        border: 0;
+        @include flexCenter;
+        .logoContainer {
+            position: relative;
+            width: get-vw(24px, 'desktop');
+            height: get-vw(24px, 'desktop');
+        }
+    }
+}

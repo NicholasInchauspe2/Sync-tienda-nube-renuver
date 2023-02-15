@@ -1,18 +1,14 @@
-import React from 'react';
-import { Props } from '@/types';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import styles from './layout.module.scss';
+import React, { FC, PropsWithChildren } from "react";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import styles from "./layout.module.scss";
 
-const Layout = ({ children } : Props) => {
-
+const Layout: FC<PropsWithChildren> = ({ children }: PropsWithChildren) => {
   return (
     <main id={styles.main}>
       <Navbar />
-      <div>
-        {children}
-      </div>
-      <Footer />    
+      <div>{children}</div>
+      <Footer />
     </main>
   );
 };

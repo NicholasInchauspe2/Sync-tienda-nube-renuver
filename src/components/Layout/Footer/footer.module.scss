@@ -1,0 +1,74 @@
+@import '@/styles/commons.scss';
+
+#footer {
+    width: 100%;
+    padding: get-vw(50px) get-vw(40px) get-vw(20px) get-vw(40px);
+    @include flexCenter() {
+        flex-direction: column;
+        gap: get-vw(10px);
+    }
+
+    @include responsive() {
+        padding: get-vw(110px, 'desktop') get-vw(150px, 'desktop') get-vw(70px, 'desktop') get-vw(150px, 'desktop');
+        gap: get-vw(32px, 'desktop');
+    }
+
+    .container {
+        @include flexCenter() {
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+
+    .linksContainer {
+        @include flexCenter() {
+            justify-content: flex-start;
+            gap: get-vw(13px);
+        }
+
+        @include responsive() {
+            gap: get-vw(40px, 'desktop');
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: get-vw(6px);
+            line-height: get-vw(7px);
+
+            @include responsive() {
+                font-size: get-vw(18px, 'desktop');
+                line-height: get-vw(21px, 'desktop');
+            }
+        }
+
+       
+    }
+
+    .mediaContainer {
+        @include flexCenter() {
+            gap: get-vw(8px);
+        }
+        @include responsive() {
+            gap: get-vw(24px, 'desktop');
+        }
+        .media {
+            position: relative;
+            width: get-vw(10.69px);
+            height: get-vw(10.69px);
+            @include responsive() {
+                width: get-vw(32px, 'desktop');
+                height: get-vw(32px, 'desktop');
+            }
+        }
+    }
+
+    p {
+        color: $color-grey-200;
+        font-size: get-vw(6px);
+        line-height: get-vw(11px);
+        @include responsive() {
+            font-size: get-vw(18px, 'desktop');
+            line-height: get-vw(34px, 'desktop');
+        }
+    }
+}
