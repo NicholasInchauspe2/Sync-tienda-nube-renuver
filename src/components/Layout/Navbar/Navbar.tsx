@@ -24,14 +24,17 @@ const Navbar = ({}) => {
         <figure className={styles.login}>
           <Image src={Icons.LOGIN} alt="login Logo" layout="fill" />
         </figure>
-        <button
-          onClick={handleClick}
-          className={`${styles.burger} ${isOpenMenu ? styles.openMenu : ""}`}
-        >
-          <div></div>
-          <div></div>
-          <div></div>
-        </button>
+        <div className={`${styles.burgerContainer} ${isOpenMenu ? styles.openMenu : ""}`}>
+          <button
+            onClick={handleClick}
+            className={`${styles.burger}`}
+          >
+            <div></div>
+            <div></div>
+            <div></div>
+          </button>
+        </div>
+        
         <Menu isOpen={isOpenMenu} handleClick={handleClick} />
       </div>
       <nav className={styles.section2}>

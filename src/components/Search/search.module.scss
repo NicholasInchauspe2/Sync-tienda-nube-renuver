@@ -15,13 +15,14 @@
     }
 
     input {
+        font-family: $secondary-font;
         width: 88%;
         height: get-vw(43px);
         border: 0;
         border-radius: get-vw(10px) 0 0 get-vw(10px);
         padding-left: get-vw(17px);
         ::placeholder {
-            color: $color-grey-light;
+            color: $color-neutro-400;
         }
         font-size: get-vw(16px);
         line-height: get-vw(19px);
@@ -53,7 +54,7 @@
             content: '';
             position: absolute;
             height: get-vw(12.5px, 'desktop');
-            border: get-vw(1px, 'desktop') solid $color-grey-light;
+            border: get-vw(1px, 'desktop') solid $color-neutro-400;
             top: get-vw(15.5px, 'desktop');
             left: get-vw(170px, 'desktop');
         }
@@ -62,6 +63,7 @@
    
     select {
         border: none;
+        font-family: $secondary-font;
         border-radius: get-vw(14px, 'desktop') 0 0 get-vw(14px, 'desktop');
         background: white;
         width: get-vw(170px, 'desktop');
@@ -79,7 +81,7 @@
         border: none;
         padding-left: get-vw(12px, 'desktop');
         ::placeholder {
-            color: $color-grey-light;
+            color: $color-neutro-400;
         }
         font-size: get-vw(14px, 'desktop');
         line-height: get-vw(16px, 'desktop');

@@ -18,6 +18,10 @@ export enum Icons {
   TWITTER = "twitter.svg",
   VERIFIED = "verified.svg",
   FAVICON = "favicon.svg",
+  HEADSET ="headset-help.svg",
+  PROFILE = "profile-circled.svg",
+  HOME = "home.svg",
+  NEXT = "arrow-right.svg"
 }
 addPath(Icons, "/icons");
 

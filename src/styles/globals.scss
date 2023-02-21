@@ -55,3 +55,15 @@ button {
 		cursor: pointer;
 	}
 }
+
+:root {
+	--swiper-pagination-color: #1A1A1A;
+	--swiper-pagination-bullet-size: 6px;
+	--swiper-pagination-bullet-width: 6px;
+	--swiper-pagination-bullet-height: 6px;
+	@include responsive() {
+		--swiper-pagination-bullet-size: 9px;
+		--swiper-pagination-bullet-width: 9px;
+		--swiper-pagination-bullet-height: 9px;
+	}
+}

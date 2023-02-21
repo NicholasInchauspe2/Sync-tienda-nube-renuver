@@ -2,22 +2,21 @@
 
 #container {
     position: relative;
-    padding: get-vw(53px) get-vw(67px);
+    padding: get-vw(53px) get-vw(67px) get-vw(25px) get-vw(67px);
 
     @include flexCenter() {
         flex-direction: column;
-        padding: get-vw(53px) get-vw(67px);
     }
 
     @include responsive() {
-        padding: get-vw(130px, 'desktop') get-vw(137px, 'desktop') get-vw(50px, 'desktop') get-vw(137px, 'desktop');
+        padding: get-vw(130px, 'desktop') get-vw(137px, 'desktop') get-vw(25px, 'desktop') get-vw(137px, 'desktop');
     }
 
     h2 {
         font-size: get-vw(25px);
         line-height: get-vw(30px);
         font-weight: bold;
-        color: $color-tertiary;
+        color: $color-black;
         margin-bottom: get-vw(43px);
         text-align: center;
 
@@ -69,7 +68,7 @@
                 font-size: get-vw(12px);
                 line-height: get-vw(16px);
                 font-weight: 600;
-                color: $color-tertiary;
+                color: $color-black;
                 margin-bottom: get-vw(6px);
                 height: get-vw(28px);
                 @include flexCenter();
@@ -83,10 +82,11 @@
             }
 
             p {
+                font-family: $secondary-font;
                 font-size: get-vw(12px);
                 line-height: get-vw(14px);
                 font-weight: 400;
-                color: $color-quaternary;
+                color: $color-neutro-600;
         
                 @include responsive() {
                     font-size: get-vw(20px, 'desktop');

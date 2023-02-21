@@ -1,7 +1,9 @@
 import React, { ReactNode, Dispatch, SetStateAction } from "react";
 
 export interface Button extends React.PropsWithChildren {
-  type: string;
+  type?: string;
+  href?: string;
+  onClick?: () =>{};
 }
 export interface HandleSearch {
   (
