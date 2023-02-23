@@ -10,17 +10,20 @@ const opinions = [
   {
     content: "El servicio es práctico y funcional. Te da varias opciones de compra a muy buenos precios",
     author: "Francisco Cabello",
-    job: "Presidente de Ualá"
+    job: "Presidente de Ualá",
+    img: Images.CLIENT
   },
   {
     content: "El servicio es práctico y funcional. Te da varias opciones de compra a muy buenos precios",
     author: "Francisco Segundo",
-    job: "Presidente de Uber"
+    job: "Presidente de Uber",
+    img: Images.CLIENT
   },
   {
     content: "El servicio es práctico y funcional. Te da varias opciones de compra a muy buenos precios",
     author: "Francisco Quinto",
-    job: "Presidente de spotify"
+    job: "Presidente de spotify",
+    img: Images.WOMAN
   }
 ];
 
@@ -29,29 +32,34 @@ const BannerOpinions = () => (
     <h2>
       Mirá lo que dicen <br /> nuestros clientes:
     </h2>
-    <div className={styles.content}>
-      <figure className={styles.image}>
-        <Image src={Images.CLIENT} alt="Foto del cliente" layout="fill" />
-      </figure>
-      <div className={styles.swiperContainer}>
-        <div className={`swiper-button image-swiper-button-next ${styles.nextButton}`}>
-          <figure className={styles.arrow}>
-            <Image src={Icons.NEXT} alt="arrow next" layout="fill" />
-          </figure>
-        </div>
-        <Swiper
-          pagination={true}
-          navigation={{
-            nextEl: ".image-swiper-button-next",
-            prevEl: ".image-swiper-button-prev",
-            disabledClass: "swiper-button-disabled"
-          }}
-          modules={[Navigation, Pagination]}
-          className="mySwiper"
-        >
-          {
-            opinions.map(item => (
-              <SwiperSlide key={`slide ${item.author}`}>
+    <div className={styles.swiperContainer}>
+      <div className={`swiper-button image-swiper-button-next ${styles.nextButton}`}>
+        <figure className={styles.arrow}>
+          <Image src={Icons.NEXT} alt="arrow next" layout="fill" />
+        </figure>
+      </div>
+      <div className={`swiper-button image-swiper-button-prev ${styles.prevButton}`}>
+        <figure className={styles.arrow}>
+          <Image src={Icons.NEXT} alt="arrow next" layout="fill" />
+        </figure>
+      </div>
+      <Swiper
+        pagination={true}
+        navigation={{
+          nextEl: ".image-swiper-button-next",
+          prevEl: ".image-swiper-button-prev",
+          disabledClass: "swiper-button-disabled"
+        }}
+        modules={[Navigation, Pagination]}
+        className="mySwiper"
+      >
+        {
+          opinions.map(item => (
+            <SwiperSlide key={`slide ${item.author}`}>
+              <div className={styles.content}>
+                <figure className={styles.image}>
+                  <Image src={item.img} alt="Foto del cliente" layout="fill" />
+                </figure>
                 <div className={styles.info}>
                   <p className={styles.quote}>“</p>
                   <h3>
@@ -61,13 +69,56 @@ const BannerOpinions = () => (
                   <p>{item.author}</p>
                   <p>{item.job}</p>
                 </div>
-              </SwiperSlide>
-            ))
-          }
-        </Swiper>
-      </div>
+              </div>
+            </SwiperSlide>
+          ))
+        }
+      </Swiper>
     </div>
   </section>
+  // <section id={styles.container}>
+  //   <h2>
+  //     Mirá lo que dicen <br /> nuestros clientes:
+  //   </h2>
+  //   <div className={styles.content}>
+  //     <figure className={styles.image}>
+  //       <Image src={Images.CLIENT} alt="Foto del cliente" layout="fill" />
+  //     </figure>
+  //     <div className={styles.swiperContainer}>
+  //       <div className={`swiper-button image-swiper-button-next ${styles.nextButton}`}>
+  //         <figure className={styles.arrow}>
+  //           <Image src={Icons.NEXT} alt="arrow next" layout="fill" />
+  //         </figure>
+  //       </div>
+  //       <Swiper
+  //         pagination={true}
+  //         navigation={{
+  //           nextEl: ".image-swiper-button-next",
+  //           prevEl: ".image-swiper-button-prev",
+  //           disabledClass: "swiper-button-disabled"
+  //         }}
+  //         modules={[Navigation, Pagination]}
+  //         className="mySwiper"
+  //       >
+  //         {
+  //           opinions.map(item => (
+  //             <SwiperSlide key={`slide ${item.author}`}>
+  //               <div className={styles.info}>
+  //                 <p className={styles.quote}>“</p>
+  //                 <h3>
+  //                   {item.content}
+  //                   <span>"</span>
+  //                 </h3>
+  //                 <p>{item.author}</p>
+  //                 <p>{item.job}</p>
+  //               </div>
+  //             </SwiperSlide>
+  //           ))
+  //         }
+  //       </Swiper>
+  //     </div>
+  //   </div>
+  // </section>
 );
 
 export default BannerOpinions;

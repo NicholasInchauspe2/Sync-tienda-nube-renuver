@@ -5,7 +5,7 @@
     padding: get-vw(25px) get-vw(15px);
 
     @include responsive() {
-        padding: get-vw(25px, 'desktop') get-vw(115px, 'desktop');
+        padding: get-vw(170px, 'desktop') get-vw(115px, 'desktop');
     }
 
     h2 {
@@ -28,42 +28,38 @@
     .content {
         display: flex;
         justify-content: space-between;
-        padding-top: get-vw(35px);
-        padding-bottom: get-vw(60px);
+        gap: get-vw(15px);
 
         @include responsive() {
-            padding-top: 0;
-            padding-bottom: get-vw(138px, 'desktop');
-    
+            gap: get-vw(80px, 'desktop');
         }
     }
 
     .image {
         position: relative;
+        min-width: get-vw(172px);
         width: get-vw(172px);
         height: get-vw(210px);
 
         @include responsive() {
+            min-width: get-vw(369px, 'desktop');
             width: get-vw(369px, 'desktop');
             height: get-vw(449px, 'desktop');
         }
     }
 
     .swiperContainer {
-        width: get-vw(225px);
-        padding-top: get-vw(25px);
+        padding-top: get-vw(35px);
         position: relative;
         @include flexCenter();
         @include responsive() {
-            width: get-vw(800px, 'desktop');
-            padding-top: get-vw(25px, 'desktop');
+            padding-top: get-vw(45px, 'desktop');
         }
 
-        .nextButton {
+        .nextButton, .prevButton {
             width: get-vw(20px);
             height: get-vw(20px);
             position: absolute;
-            right: 0;
             box-shadow: 0px 1.71073px 6.84293px rgba(0, 0, 0, 0.16);
             border-radius: 100%;
             @include flexCenter();
@@ -86,10 +82,19 @@
                 }
             }
         }
+        .nextButton {
+            right: 0;
+        }
+
+        .prevButton {
+            left: 0;
+            .arrow {
+                transform: rotate(180deg);
+            }
+        }
     }
 
     .info {
-        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -108,6 +113,7 @@
             font-weight: normal;
             color: $color-black;
             margin-bottom: get-vw(30px);
+            width: 90%;
     
             @include responsive() {
                 font-size: get-vw(40px, 'desktop');
@@ -129,7 +135,6 @@
             @include responsive() {
                 font-size: get-vw(150px, 'desktop');
                 line-height: get-vw(20px, 'desktop');
-                // padding-top: get-vw(30px, 'desktop');
             }
         }
 

@@ -7,6 +7,10 @@
     flex-direction: column;
     padding: get-vw(15px) get-vw(20px) get-vw(15px) get-vw(30px);
     gap: get-vw(22px);
+    transition: all cubic-bezier(0.65, 0.05, 0.36, 1) 0.7s;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 
     @include responsive() {
         padding: get-vw(20px, 'desktop') get-vw(120px,'desktop');
@@ -116,3 +120,6 @@
 
 }
 
+.noSticky {
+    top: -200px!important;
+}
