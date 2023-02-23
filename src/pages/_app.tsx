@@ -18,8 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
           },
           {
             rel: "apple-touch-icon",
-            href: Icons.ENERGY1,
-            sizes: "76x76",
+            href: Icons.APPLE_ICON,
           },
         ]}
       />

@@ -29,7 +29,7 @@
         font-size: get-vw(25px);
         line-height: get-vw(50px);
         font-weight: bold;
-        color: white;
+        color: $color-white;
         margin-bottom: get-vw(17px);
 
         @include responsive() {
@@ -42,7 +42,7 @@
     p {
         font-family: $secondary-font;
         width: get-vw(240px);
-        color: white;
+        color: $color-white;
         font-size: get-vw(16px);
         line-height: get-vw(35px);
         margin-bottom: get-vw(40px);

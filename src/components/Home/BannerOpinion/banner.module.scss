@@ -41,6 +41,11 @@
         width: get-vw(172px);
         height: get-vw(210px);
 
+        >img {
+
+            object-fit: cover;
+        }
+
         @include responsive() {
             min-width: get-vw(369px, 'desktop');
             width: get-vw(369px, 'desktop');
@@ -48,49 +53,65 @@
         }
     }
 
-    .swiperContainer {
+    .mySwipper{
         padding-top: get-vw(35px);
-        position: relative;
-        @include flexCenter();
         @include responsive() {
             padding-top: get-vw(45px, 'desktop');
         }
+    }
 
-        .nextButton, .prevButton {
-            width: get-vw(20px);
-            height: get-vw(20px);
-            position: absolute;
-            box-shadow: 0px 1.71073px 6.84293px rgba(0, 0, 0, 0.16);
-            border-radius: 100%;
-            @include flexCenter();
-            z-index: 10;
-            background-color: $color-white;
+    .nextButton, .prevButton {
+        width: get-vw(20px);
+        height: get-vw(20px);
+        position: absolute;
+        top: 53%;
+        box-shadow: 0px 1.71073px 6.84293px $color-shadow;
+        border-radius: 100%;
+        border: none;
+        z-index: 10;
+        background-color: $color-white;
+        &:hover {
+        box-shadow: 0px 4.5px 6.84293px $color-shadow;
+        }
+        &:active{
+            box-shadow: 0px 2px 2px $color-shadow;
+            background-color: $color-secondary;
+        }
+        @include flexCenter();
+        @include responsive() {
+            width: get-vw(64px, 'desktop');
+            height: get-vw(64px, 'desktop');
+        }
+
+        .arrow {
+            position: relative;
+            width: get-vw(10px);
+            height: get-vw(10px);
 
             @include responsive() {
-                width: get-vw(64px, 'desktop');
-                height: get-vw(64px, 'desktop');
-            }
-
-            .arrow {
-                position: relative;
-                width: get-vw(10px);
-                height: get-vw(10px);
-
-                @include responsive() {
-                    width: get-vw(32px, 'desktop');
-                    height: get-vw(32px, 'desktop');
-                }
+                width: get-vw(32px, 'desktop');
+                height: get-vw(32px, 'desktop');
             }
         }
-        .nextButton {
-            right: 0;
+    }
+
+    .nextButton {
+        right: 0;
+        margin-right: 10px;
+        @include responsive() {
+            margin-right: get-vw(25px, 'desktop');
+        }
+    }
+
+    .prevButton {
+        left: 0;
+        margin-left: 10px;
+        @include responsive() {
+            margin-left: get-vw(25px, 'desktop');
         }
 
-        .prevButton {
-            left: 0;
-            .arrow {
-                transform: rotate(180deg);
-            }
+        .arrow {
+            transform: rotate(180deg);
         }
     }
 
