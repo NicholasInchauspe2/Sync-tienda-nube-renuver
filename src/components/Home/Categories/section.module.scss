@@ -1,0 +1,105 @@
+@import '@/styles/commons.scss';
+
+#container {
+    position: relative;
+    padding: get-vw(25px) get-vw(10px);
+
+    @include flexCenter() {
+        flex-direction: column;
+    }
+
+    @include responsive() {
+        padding: get-vw(130px, 'desktop') get-vw(137px, 'desktop') get-vw(20px, 'desktop') get-vw(137px, 'desktop');
+    }
+
+    h2 {
+        font-size: get-vw(25px);
+        line-height: get-vw(30px);
+        font-weight: bold;
+        color: $color-black;
+        margin-bottom: get-vw(50px);
+        text-align: center;
+
+        @include responsive() {
+            font-size: get-vw(40px, 'desktop');
+            line-height: get-vw(47px, 'desktop');
+            margin-bottom: get-vw(45px, 'desktop');
+        }
+    }
+
+    .content {
+        display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: get-vw(6px) get-vw(9px);
+        width: 100%;
+
+        @include responsive() {
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: get-vw(13px, 'desktop');
+        }
+
+        .card {
+            @include flexCenter() {
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+            width: 100%;
+            padding: get-vw(30px) 0;
+            text-align: center;
+            margin: 0 auto;
+            border: get-vw(1px) solid $color-white-200;
+            border-radius: get-vw(9px);
+            transition: all .5s;
+            text-decoration: none;
+
+            &:hover {
+                border-color: $color-primary;
+            }
+
+            @include responsive() {
+                width: get-vw(273px, 'desktop');
+                border-radius: get-vw(13px, 'desktop');
+                padding: get-vw(40px , 'desktop') 0;
+            }
+
+            .image {
+                position: relative;
+                width: get-vw(100px);
+                height: get-vw(150px);
+                margin-bottom: get-vw(17px);
+        
+                @include responsive() {
+                    width: get-vw(140px, 'desktop');
+                    height: get-vw(210px, 'desktop');
+                    margin-bottom: get-vw(19px, 'desktop');
+                }
+            }
+            h4 {
+                font-size: get-vw(11px);
+                line-height: get-vw(13px);
+                font-weight: 800;
+                color: $color-black;
+                margin-bottom: get-vw(4px);
+        
+                @include responsive() {
+                    font-size: get-vw(15px, 'desktop');
+                    line-height: get-vw(18px, 'desktop');
+                    margin-bottom: get-vw(6px, 'desktop');
+                    height: auto;
+                }
+            }
+
+            p {
+                font-size: get-vw(10px);
+                line-height: get-vw(12px);
+                font-weight: 500;
+                color: $color-neutro-600;
+        
+                @include responsive() {
+                    font-size: get-vw(14px, 'desktop');
+                    line-height: get-vw(17px, 'desktop');
+                }
+            }
+        }
+    }
+}

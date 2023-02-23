@@ -1,7 +1,7 @@
 @import '@/styles/commons.scss';
 
 .button {
-    background-color: $color-tertiary;
+    background-color: $color-black;
     border-radius: get-vw(96px);
     padding: get-vw(12px) get-vw(24px);
     border: none;
@@ -16,6 +16,10 @@
         font-size: get-vw(18px, 'desktop');
         line-height: get-vw(21px, 'desktop');
     }
+
+    &:active {
+        box-shadow: inset 0px 0px 13px 0px $color-neutro-600;
+    }
 }
 
 
@@ -29,4 +33,20 @@
         padding: get-vw(17px, 'desktop');
         border-width: get-vw(2px, 'desktop');
     }
+}
+
+.square-green, .square-white {
+    border-radius: get-vw(6px);
+    padding: get-vw(14px) get-vw(22px);
+    min-width: get-vw(125px);
+}
+
+.square-green {
+    background-color: $color-primary;
+}
+
+.square-white {
+    background: transparent;
+    color: $color-black;
+    box-shadow: 0px 0.990071px 2.97021px $color-shadow;
 }

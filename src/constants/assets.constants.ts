@@ -18,6 +18,10 @@ export enum Icons {
   TWITTER = "twitter.svg",
   VERIFIED = "verified.svg",
   FAVICON = "favicon.svg",
+  HEADSET = "headset-help.svg",
+  PROFILE = "profile-circled.svg",
+  HOME = "home.svg",
+  NEXT = "arrow-right.svg",
 }
 addPath(Icons, "/icons");
 
@@ -25,7 +29,9 @@ export enum Images {
   STEP1 = "step1.svg",
   STEP2 = "step2.svg",
   STEP3 = "step3.svg",
-  CLIENT = "client.png",
+  CLIENT1 = "client1.png",
+  CLIENT2 = "client2.webp",
+  CLIENT3 = "client3.png",
   CELLPHONE = "cellphone.png",
   WOMAN = "woman.png",
 }

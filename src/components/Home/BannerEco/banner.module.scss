@@ -18,7 +18,7 @@
         height: 100%;
         width: 100%;
         padding: get-vw(35px);
-        background-color: rgba(75, 183, 71, 0.1);;
+        background-color: $color-secondary;
 
         @include responsive() {
             padding: get-vw(96px, 'desktop') get-vw(120px, 'desktop');
@@ -67,7 +67,7 @@
             font-size: get-vw(20px);
             line-height: get-vw(26px);
             font-weight: normal;
-            color: $color-tertiary;
+            color: $color-black;
             margin-bottom: 0;
     
             @include responsive() {

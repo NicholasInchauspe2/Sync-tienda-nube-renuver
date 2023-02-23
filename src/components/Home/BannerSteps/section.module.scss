@@ -18,7 +18,7 @@
         font-size: get-vw(25px);
         line-height: get-vw(30px);
         font-weight: bold;
-        color: $color-tertiary;
+        color: $color-black;
         margin-bottom: get-vw(55px);
         text-align: center;
         width: 90%;
@@ -71,7 +71,7 @@
                 font-size: get-vw(12px);
                 line-height: get-vw(14px);
                 font-weight: 600;
-                color: $color-tertiary;
+                color: $color-black;
                 margin-bottom: get-vw(8px);
                 @include flexCenter();
         
@@ -87,7 +87,8 @@
                 font-size: get-vw(12px);
                 line-height: get-vw(14px);
                 font-weight: 400;
-                color: $color-quaternary;
+                color: $color-neutro-600;
+                font-family: $secondary-font;
         
                 @include responsive() {
                     font-size: get-vw(20px, 'desktop');

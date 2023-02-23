@@ -7,6 +7,10 @@
     flex-direction: column;
     padding: get-vw(15px) get-vw(20px) get-vw(15px) get-vw(30px);
     gap: get-vw(22px);
+    transition: all cubic-bezier(0.65, 0.05, 0.36, 1) 0.7s;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 
     @include responsive() {
         padding: get-vw(20px, 'desktop') get-vw(120px,'desktop');
@@ -48,6 +52,16 @@
         }
     }
 
+    .burgerContainer {
+        z-index: 200;
+        transition: all .5s;
+        @include flexCenter;
+
+        @include responsive() {
+            display: none;
+        }
+    }
+
     .burger {
         display: flex;
         flex-direction: column;
@@ -58,11 +72,7 @@
         width: get-vw(32px);
         height: get-vw(20px);
         padding: 0;
-        z-index: 200;
-
-        @include responsive() {
-            display: none;
-        }
+        transition: all .5s;
 
         div {
             background-color: black;
@@ -80,9 +90,22 @@
         }
     }
 
-    .burger.openMenu  {
+    .burgerContainer.openMenu  {
+        background-color: black;
+        border-radius: 100%;
+        width: get-vw(30px);
+        height: get-vw(30px);
+        padding-left: get-vw(3px);
+        position: fixed;
+        right: get-vw(20px);
+
+        .burger {
+            width: get-vw(15px);
+            height: get-vw(13.7px);
+        }
         div {
-            width: 75%;
+            width: 96%;
+            background: $color-neutro-200;
         }
         div:first-child {
             transform: rotate(45deg);
@@ -97,3 +120,6 @@
 
 }
 
+.noSticky {
+    top: -200px!important;
+}

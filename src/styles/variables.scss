@@ -1,14 +1,22 @@
 // Fonts
-$primary-font:'Rubik', sans-serif;
-
+$primary-font: 'Raleway', sans-serif;
+$secondary-font:'Quicksand', sans-serif;
 
 // Colors
-$color-primary: #4BB747;
-$color-secondary: #FFFFFF;
-$color-tertiary: #1A1A1A;
-$color-quaternary: #777777;
-$color-quinary: #4bb7471a;
-$color-grey-light: #918EA0;
-$color-grey-200: #707C8E;
-$color-white:#F5F5F5;
 
+$color-primary: #4BB747;
+$color-black: #1A1A1A;
+$color-secondary: rgba(75, 183, 71, 0.1);
+$color-shadow:rgba(0, 0, 0, 0.16);
+
+// white
+$color-white:#FFFFFF;
+$color-white-200: #E4E3E3;
+
+// neutros
+$color-neutro-100: #D9DBE9;
+$color-neutro-200: #EDF8ED;
+$color-neutro-300: #A0A3BD;
+$color-neutro-400: #918EA0;
+$color-neutro-500: #707C8E;
+$color-neutro-600: #777777;
