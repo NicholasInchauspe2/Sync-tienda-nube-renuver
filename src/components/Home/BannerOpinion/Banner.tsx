@@ -9,21 +9,21 @@ import { Icons, Images } from "@/constants/assets.constants";
 const opinions = [
   {
     content:
-      "No estaba muy decidida a comprar reacondicionado pero después de contactarlos y resolver todas las dudas ( gracias por la paciencia!!) me pareció una excelente opción costo-beneficio. Por ahora feliz con la compra de mi iPhone 11 128GB.",
+      "No estaba muy decidida a comprar reacondicionado pero después de resolver todas las dudas con ustedes me pareció una excelente opción costo-beneficio.",
     author: "Carolina Fila",
     job: "",
-    img: Images.CLIENT3,
+    img: Images.CLIENT2,
   },
   {
     content:
-      "Compré un iPhone refurbished con garantía por la página y retiré por la sucursal en Recoleta. Funciona y se ve como nuevo. Los recomiendo!",
+      "Compré un iPhone usado con garantía por la página y retiré por la sucursal. Funciona y se ve como nuevo. ¡Los recomiendo!",
     author: "Gustavo E. Velesquen Saenz",
     job: "",
     img: Images.CLIENT1,
   },
   {
     content:
-      "Excelente atención online y en el local. La garantía de 6 meses me dio tranquilidad para comprar un iPhone X 64GB que por ahora, funciona excelente. Me gustó también ayudar a reducir el descarte tecnológico, comprando usado en lugar de nuevo.",
+      "Excelente atención. La garantía de 12 meses me dio tranquilidad para comprar. Me gustó también ayudar a reducir el descarte tecnológico comprando usado.",
     author: "Susana Perez Marquez",
     job: "",
     img: Images.CLIENT3,

@@ -30,7 +30,7 @@ export enum Images {
   STEP2 = "step2.svg",
   STEP3 = "step3.svg",
   CLIENT1 = "client1.png",
-  CLIENT2 = "client2.webp",
+  CLIENT2 = "client2.png",
   CLIENT3 = "client3.png",
   CELLPHONE = "cellphone.png",
   WOMAN = "woman.png",

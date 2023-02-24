@@ -92,8 +92,8 @@
 .slideIn {
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
-    -webkit-transition: all 0.8s ease-out;
-    transition: all 0.8s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
     -webkit-perspective: 300px;
     perspective: 300px;
     position: fixed !important;
@@ -105,8 +105,8 @@
 .slideOut {
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
-    -webkit-transition: all 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-    transition: all 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    -webkit-transition: all 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    transition: all 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
     position: fixed !important;
     top: 0px;
     right: -20px;
