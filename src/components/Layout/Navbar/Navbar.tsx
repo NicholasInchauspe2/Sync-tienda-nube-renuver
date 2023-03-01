@@ -6,24 +6,24 @@ import Menu from "../Menu";
 import styles from "./navbar.module.scss";
 import { useScrollDirection } from "react-use-scroll-direction";
 
-
 const Navbar = ({}) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
-  const [lastScroll, setLastScroll] = useState('');
+  const [lastScroll, setLastScroll] = useState("");
   const [scrollY, setScrollY] = useState(0);
 
   const handleClick = () => setIsOpenMenu(!isOpenMenu);
 
   const { isScrollingY, scrollDirection } = useScrollDirection();
 
-  let noSticky = '';
+  let noSticky = "";
 
   if (isScrollingY && scrollDirection !== lastScroll) {
     setLastScroll(scrollDirection || lastScroll);
-    if(scrollDirection === 'DOWN') setScrollY(window.scrollY);
-  };
-  if (lastScroll === 'UP') noSticky = '';
-  if (lastScroll === 'DOWN' && window.scrollY - scrollY > 200) noSticky = 'noSticky';
+    if (scrollDirection === "DOWN") setScrollY(window.scrollY);
+  }
+  if (lastScroll === "UP") noSticky = "";
+  if (lastScroll === "DOWN" && window.scrollY - scrollY > 200)
+    noSticky = "noSticky";
 
   return (
     <header id={styles.header} className={styles[noSticky]}>
@@ -31,7 +31,7 @@ const Navbar = ({}) => {
         <figure className={styles.logo}>
           <Image src={Icons.LOGO} alt="Renuver Logo" layout="fill" />
         </figure>
-        <Search
+        {/* <Search
           name="searchdesktop"
           variant="secundary"
           placeholder="Buscá por modelos"
@@ -50,14 +50,14 @@ const Navbar = ({}) => {
           </button>
         </div>
         
-        <Menu isOpen={isOpenMenu} handleClick={handleClick} />
+        <Menu isOpen={isOpenMenu} handleClick={handleClick} /> */}
       </div>
       <nav className={styles.section2}>
-        <Search
+        {/* <Search
           name="searchMobile"
           variant="primary"
           placeholder="Buscá por modelos"
-        />
+        /> */}
       </nav>
     </header>
   );

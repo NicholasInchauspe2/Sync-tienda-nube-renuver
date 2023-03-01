@@ -3,24 +3,25 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./footer.module.scss";
 import { Icons } from "@/constants/assets.constants";
+import { Routing } from "@/constants/routing.constants";
 
 const Footer = ({}) => {
   const links = [
     {
       label: "Quienes somos",
-      to: "/#",
+      to: Routing.US,
     },
     {
       label: "Garantía Renuver",
-      to: "/#",
+      to: Routing.WARRANTY,
     },
     {
-      label: "¿Qué es un iphone refurbished?",
-      to: "/#",
+      label: "¿Qué es un iphone reacondicionado?",
+      to: Routing.IPHONE_REFURBISHED,
     },
     {
       label: "Preguntas Frecuentes",
-      to: "/#",
+      to: Routing.FQ,
     },
   ];
 
@@ -28,17 +29,17 @@ const Footer = ({}) => {
     {
       media: "Facebook",
       icon: Icons.FACEBOOK,
-      to: "https://www.facebook.com/",
+      to: Routing.FACEBOOK,
     },
     {
       media: "Twitter",
       icon: Icons.TWITTER,
-      to: "https://twitter.com/",
+      to: Routing.TWITTER,
     },
     {
       media: "Instagram",
       icon: Icons.INSTAGRAM,
-      to: "https://www.instagram.com/",
+      to: Routing.INSTAGRAM,
     },
   ];
 
