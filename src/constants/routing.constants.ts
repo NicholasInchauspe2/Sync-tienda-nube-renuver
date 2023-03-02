@@ -7,6 +7,5 @@ export enum Routing {
 
   // SOCIAL MEDIA
   INSTAGRAM = "https://www.instagram.com/renuver.arg/",
-  FACEBOOK = "",
-  TWITTER = "",
+  FACEBOOK = "https://www.facebook.com/TiendaRenuver",
 }

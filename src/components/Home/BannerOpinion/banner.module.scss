@@ -75,7 +75,7 @@
         }
         &:active{
             box-shadow: 0px 2px 2px $color-shadow;
-            background-color: $color-secondary;
+            background-color: $color-primary-light;
         }
         @include flexCenter();
         @include responsive() {

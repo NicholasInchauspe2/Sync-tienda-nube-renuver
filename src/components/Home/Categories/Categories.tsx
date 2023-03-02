@@ -13,7 +13,7 @@ const SectionReasons = () => {
         {Mock.map((category) => (
           <Link
             key={category.id}
-            className={styles.card}
+            className={`${styles.card} ${category.blocked && styles.blocked}`}
             href={`${category.url}`}
           >
             <figure className={styles.image}>

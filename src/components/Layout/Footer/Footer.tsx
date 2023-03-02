@@ -32,11 +32,6 @@ const Footer = ({}) => {
       to: Routing.FACEBOOK,
     },
     {
-      media: "Twitter",
-      icon: Icons.TWITTER,
-      to: Routing.TWITTER,
-    },
-    {
       media: "Instagram",
       icon: Icons.INSTAGRAM,
       to: Routing.INSTAGRAM,
@@ -62,7 +57,7 @@ const Footer = ({}) => {
         </div>
       </div>
 
-      <p>©2022 Furbi. Todos los derechos reservados.</p>
+      <p>©2022 Renúver. Todos los derechos reservados.</p>
     </footer>
   );
 };

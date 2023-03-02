@@ -27,6 +27,7 @@
         }
     }
 
+
     .content {
         display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -37,6 +38,7 @@
             grid-template-columns: repeat(4, 1fr);
             grid-gap: get-vw(13px, 'desktop');
         }
+
 
         .card {
             @include flexCenter() {
@@ -64,16 +66,20 @@
 
             .image {
                 position: relative;
-                width: get-vw(100px);
+                width: get-vw(128.5px);
                 height: get-vw(150px);
                 margin-bottom: get-vw(17px);
+                object-fit: cover;
         
                 @include responsive() {
-                    width: get-vw(140px, 'desktop');
-                    height: get-vw(210px, 'desktop');
+                    width: get-vw(171.5px, 'desktop');
+                    height: get-vw(200px, 'desktop');
                     margin-bottom: get-vw(19px, 'desktop');
                 }
             }
+
+           
+
             h4 {
                 font-size: get-vw(11px);
                 line-height: get-vw(13px);
@@ -100,6 +106,33 @@
                     line-height: get-vw(17px, 'desktop');
                 }
             }
+        }
+
+        .blocked{
+            cursor: default;
+            pointer-events: none;
+            position: relative;
+
+            &::after{
+                top:0;
+                position: absolute;
+                content: '';
+                height: 100%;
+                width: 100%;
+                background-color: $color-shadow;
+                border-radius: get-vw(7px);
+
+    
+                @include responsive() {
+                    border-radius: get-vw(10px, 'desktop');
+                }
+
+            }
+            
+            .image{
+                    filter: grayscale(1);
+            }
+
         }
     }
 }
