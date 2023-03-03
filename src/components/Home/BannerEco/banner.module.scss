@@ -18,7 +18,7 @@
         height: 100%;
         width: 100%;
         padding: get-vw(35px);
-        background-color: $color-secondary;
+        background-color: $color-primary-light;
 
         @include responsive() {
             padding: get-vw(96px, 'desktop') get-vw(120px, 'desktop');

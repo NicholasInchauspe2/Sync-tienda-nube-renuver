@@ -17,7 +17,9 @@ const BannerPrimary = () => (
     <figure className={styles.image}>
       <Image src={Images.WOMAN} alt="Foto de mujer" layout="fill" />
     </figure>
-    <Button type="primary">Tienda</Button>
+    <Button type="primary" href={"https://tienda.renuver.com/productos/"}>
+      Tienda
+    </Button>
   </section>
 );
 

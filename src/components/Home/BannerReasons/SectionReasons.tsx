@@ -31,7 +31,7 @@ const SectionReasons = () => {
 
   return (
     <section id={styles.container}>
-      <h2>Por qué comprar en Furbi</h2>
+      <h2>Por qué comprar en Renúver</h2>
       <div className={styles.content}>
         {reasons.map(({ icon, title, description }, idx) => (
           <div className={styles.card} key={idx}>

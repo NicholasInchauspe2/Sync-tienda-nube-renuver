@@ -17,8 +17,15 @@
         line-height: get-vw(21px, 'desktop');
     }
 
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.03); 
+        box-shadow: 0 0 7px  $color-shadow;
+    }
+
     &:active {
-        box-shadow: inset 0px 0px 13px 0px $color-neutro-600;
+        background-color: $color-primary-light;
     }
 }
 

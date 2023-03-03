@@ -6,7 +6,6 @@
     display: flex;
     flex-direction: column;
     padding: get-vw(15px) get-vw(20px) get-vw(15px) get-vw(30px);
-    gap: get-vw(22px);
     transition: all cubic-bezier(0.65, 0.05, 0.36, 1) 0.7s;
     position: sticky;
     top: 0;
@@ -24,6 +23,7 @@
     }
 
     .section2 {
+        margin-top: get-vw(17px);
         @include responsive() {
             display: none;
         }
@@ -31,12 +31,12 @@
 
     .logo {
         position: relative;
-        width: get-vw(68.67px);
-        height: get-vw(32px);
+        width: get-vw(100px);
+        height: get-vw(20px);
 
         @include responsive() {
-            width: get-vw(103px, 'desktop');
-            height: get-vw(48px, 'desktop');
+            width: get-vw(200px, 'desktop');
+            height: get-vw(40px, 'desktop');
 
         }
     }

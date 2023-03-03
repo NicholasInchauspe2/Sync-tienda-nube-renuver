@@ -27,6 +27,7 @@
         }
     }
 
+
     .content {
         display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -38,6 +39,7 @@
             grid-gap: get-vw(13px, 'desktop');
         }
 
+
         .card {
             @include flexCenter() {
                 flex-direction: column;
@@ -47,33 +49,39 @@
             padding: get-vw(30px) 0;
             text-align: center;
             margin: 0 auto;
-            border: get-vw(1px) solid $color-white-200;
+            border: get-vw(0.8px) solid $color-white-200;
             border-radius: get-vw(9px);
-            transition: all .5s;
             text-decoration: none;
-
-            &:hover {
-                border-color: $color-primary;
-            }
-
+            transition: all 0.5s ease-in-out;
+            
             @include responsive() {
                 width: get-vw(273px, 'desktop');
                 border-radius: get-vw(13px, 'desktop');
                 padding: get-vw(40px , 'desktop') 0;
+
+                &:hover {
+                    transform: scale(1.02); 
+                    border-color: $color-primary;
+                    box-shadow: 0 0 10px $color-shadow;
+                }
             }
 
             .image {
                 position: relative;
-                width: get-vw(100px);
+                width: get-vw(128.5px);
                 height: get-vw(150px);
                 margin-bottom: get-vw(17px);
+                object-fit: cover;
         
                 @include responsive() {
-                    width: get-vw(140px, 'desktop');
-                    height: get-vw(210px, 'desktop');
+                    width: get-vw(171.5px, 'desktop');
+                    height: get-vw(200px, 'desktop');
                     margin-bottom: get-vw(19px, 'desktop');
                 }
             }
+
+           
+
             h4 {
                 font-size: get-vw(11px);
                 line-height: get-vw(13px);
@@ -100,6 +108,33 @@
                     line-height: get-vw(17px, 'desktop');
                 }
             }
+        }
+
+        .blocked{
+            cursor: default;
+            pointer-events: none;
+            position: relative;
+
+            &::after{
+                top:0;
+                position: absolute;
+                content: '';
+                height: 100%;
+                width: 100%;
+                background-color: $color-shadow;
+                border-radius: get-vw(7px);
+
+    
+                @include responsive() {
+                    border-radius: get-vw(10px, 'desktop');
+                }
+
+            }
+            
+            .image{
+                    filter: grayscale(1);
+            }
+
         }
     }
 }
