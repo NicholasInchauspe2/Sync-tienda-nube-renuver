@@ -35,7 +35,7 @@ export enum Images {
   IPHONESE = "iphoneSE.jpg",
   IPHONE11 = "iphone11.jpg",
   IPHONE12 = "iphone12.jpg",
-  IPHONE13 = "iphone13.jpg",
+  IPHONE13 = "iphone13.png",
   IPHONE14 = "iphone14.jpg",
   CLIENT1 = "client1.png",
   CLIENT2 = "client2.png",

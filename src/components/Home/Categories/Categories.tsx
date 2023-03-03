@@ -1,11 +1,21 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { formatPrice } from "@/utils";
+import { currencyFormatter } from "@/utils";
 import Mock from "./mockProducts.json";
 import styles from "./section.module.scss";
 
 const SectionReasons = () => {
+  const message = (minPrice: number) => {
+    return minPrice
+      ? `a partir de ${currencyFormatter({
+          currency: "ARS",
+          value: minPrice,
+          minimumFractionDigits: 0,
+        })}`
+      : "Pronto disponible";
+  };
+
   return (
     <section id={styles.container}>
       <h2>Encontrá el iPhone ideal para vos</h2>
@@ -20,7 +30,7 @@ const SectionReasons = () => {
               <Image src={category.image} alt="cellphone image" layout="fill" />
             </figure>
             <h4>{category.name}</h4>
-            <p>a partir de {formatPrice(category.minPrice)}</p>
+            <p>{message(category.minPrice)}</p>
           </Link>
         ))}
       </div>

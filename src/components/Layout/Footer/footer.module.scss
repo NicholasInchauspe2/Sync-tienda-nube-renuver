@@ -29,11 +29,17 @@
         @include responsive() {
             gap: get-vw(40px, 'desktop');
         }
+
         a {
             text-decoration: none;
             color: black;
             font-size: get-vw(6px);
             line-height: get-vw(7px);
+            transition: transform 0.3s ease-in-out;
+            &:hover{
+                transform: scale(1.03); 
+                color: $color-primary
+            }
 
             @include responsive() {
                 font-size: get-vw(18px, 'desktop');
@@ -55,6 +61,11 @@
             position: relative;
             width: get-vw(10.69px);
             height: get-vw(10.69px);
+            transition: transform 0.3s ease-in-out;
+            &:hover{
+                transform: scale(1.1); 
+            }
+
             @include responsive() {
                 width: get-vw(32px, 'desktop');
                 height: get-vw(32px, 'desktop');

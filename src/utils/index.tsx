@@ -1,8 +1,16 @@
-export const formatPrice = (number: number) => {
-    if(Number.isNaN(number)) return '$0';
-    return number.toLocaleString('es-ar', {
-        style: 'currency',
-        currency: 'ARS',
-        minimumFractionDigits: 2
-    });
+export const currencyFormatter = ({
+  currency,
+  value,
+  minimumFractionDigits,
+}: {
+  currency: string;
+  value: number;
+  minimumFractionDigits: number;
+}) => {
+  const formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    minimumFractionDigits,
+    currency,
+  });
+  return formatter.format(value);
 };
