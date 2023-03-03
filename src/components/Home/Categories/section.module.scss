@@ -53,17 +53,17 @@
             border-radius: get-vw(9px);
             text-decoration: none;
             transition: all 0.5s ease-in-out;
-
-            &:hover {
-                transform: scale(1.02); 
-                border-color: $color-primary;
-                box-shadow: 0 0 10px $color-shadow;
-            }
-
+            
             @include responsive() {
                 width: get-vw(273px, 'desktop');
                 border-radius: get-vw(13px, 'desktop');
                 padding: get-vw(40px , 'desktop') 0;
+
+                &:hover {
+                    transform: scale(1.02); 
+                    border-color: $color-primary;
+                    box-shadow: 0 0 10px $color-shadow;
+                }
             }
 
             .image {

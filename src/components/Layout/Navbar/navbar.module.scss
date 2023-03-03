@@ -23,6 +23,7 @@
     }
 
     .section2 {
+        margin-top: get-vw(17px);
         @include responsive() {
             display: none;
         }
