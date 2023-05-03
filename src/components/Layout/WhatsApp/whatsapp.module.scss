@@ -1,0 +1,15 @@
+.container {
+	header {
+		div {
+			img {
+				margin-left: 6px;
+				height: 50px !important;
+				width: 50px !important;
+			}
+
+			&::after {
+				right: 14px !important;
+			}
+		}
+	}
+}

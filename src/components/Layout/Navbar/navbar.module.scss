@@ -1,125 +1,123 @@
 @import '@/styles/commons.scss';
 
 #header {
-    width: 100%;
-    background:$color-primary;
-    display: flex;
-    flex-direction: column;
-    padding: get-vw(15px) get-vw(20px) get-vw(15px) get-vw(30px);
-    transition: all cubic-bezier(0.65, 0.05, 0.36, 1) 0.7s;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+	width: 100%;
+	background: $color-primary;
+	display: flex;
+	flex-direction: column;
+	padding: get-vw(15px) get-vw(20px) get-vw(15px) get-vw(30px);
+	transition: all cubic-bezier(0.65, 0.05, 0.36, 1) 0.7s;
+	position: sticky;
+	top: 0;
+	z-index: 100;
 
-    @include responsive() {
-        padding: get-vw(20px, 'desktop') get-vw(120px,'desktop');
-    }
+	@include responsive() {
+		padding: get-vw(20px, 'desktop') get-vw(120px, 'desktop');
+	}
 
-    .section1 {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+	.section1 {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-    .section2 {
-        margin-top: get-vw(17px);
-        @include responsive() {
-            display: none;
-        }
-    }
+	.section2 {
+		margin-top: get-vw(17px);
+		@include responsive() {
+			display: none;
+		}
+	}
 
-    .logo {
-        position: relative;
-        width: get-vw(100px);
-        height: get-vw(20px);
+	.logo {
+		position: relative;
+		width: get-vw(100px);
+		height: get-vw(20px);
 
-        @include responsive() {
-            width: get-vw(200px, 'desktop');
-            height: get-vw(40px, 'desktop');
+		@include responsive() {
+			width: get-vw(200px, 'desktop');
+			height: get-vw(40px, 'desktop');
+		}
+	}
 
-        }
-    }
+	.login {
+		position: relative;
+		display: none;
 
-    .login {
-        position: relative;
-        display: none;
+		@include responsive() {
+			display: block;
+			width: get-vw(38px, 'desktop');
+			height: get-vw(38px, 'desktop');
+		}
+	}
 
-        @include responsive() {
-            display: block;
-            width: get-vw(38px, 'desktop');
-            height: get-vw(38px, 'desktop');
-        }
-    }
+	.burgerContainer {
+		z-index: 200;
+		transition: all 0.5s;
+		@include flexCenter;
 
-    .burgerContainer {
-        z-index: 200;
-        transition: all .5s;
-        @include flexCenter;
+		@include responsive() {
+			display: none;
+		}
+	}
 
-        @include responsive() {
-            display: none;
-        }
-    }
+	.burger {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		border: 0;
+		background: transparent;
+		width: get-vw(32px);
+		height: get-vw(20px);
+		padding: 0;
+		transition: all 0.5s;
 
-    .burger {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        border: 0;
-        background: transparent;
-        width: get-vw(32px);
-        height: get-vw(20px);
-        padding: 0;
-        transition: all .5s;
+		div {
+			background-color: black;
+			height: get-vw(3px);
+			width: 100%;
+			border-radius: 20px;
+			transition: all 0.5s;
+			transform-origin: left;
+		}
+		div:nth-child(2) {
+			width: 80%;
+		}
+		div:last-child {
+			width: 50%;
+		}
+	}
 
-        div {
-            background-color: black;
-            height: get-vw(3px);
-            width: 100%;
-            border-radius: 20px;
-            transition: all .5s;
-            transform-origin: left;
-        }
-        div:nth-child(2) {
-            width: 80%;
-        }
-        div:last-child {
-            width: 50%;
-        }
-    }
+	.burgerContainer.openMenu {
+		background-color: black;
+		border-radius: 100%;
+		width: get-vw(30px);
+		height: get-vw(30px);
+		padding-left: get-vw(3px);
+		position: fixed;
+		right: get-vw(20px);
 
-    .burgerContainer.openMenu  {
-        background-color: black;
-        border-radius: 100%;
-        width: get-vw(30px);
-        height: get-vw(30px);
-        padding-left: get-vw(3px);
-        position: fixed;
-        right: get-vw(20px);
-
-        .burger {
-            width: get-vw(15px);
-            height: get-vw(13.7px);
-        }
-        div {
-            width: 96%;
-            background: $color-neutro-200;
-        }
-        div:first-child {
-            transform: rotate(45deg);
-        }
-        div:nth-child(2) {
-            opacity: 0;
-        }
-        div:last-child {
-            transform: rotate(-45deg);
-        }
-    }
-
+		.burger {
+			width: get-vw(15px);
+			height: get-vw(13.7px);
+		}
+		div {
+			width: 96%;
+			background: $color-neutro-200;
+		}
+		div:first-child {
+			transform: rotate(45deg);
+		}
+		div:nth-child(2) {
+			opacity: 0;
+		}
+		div:last-child {
+			transform: rotate(-45deg);
+		}
+	}
 }
 
 .noSticky {
-    top: -200px!important;
+	top: -200px !important;
 }

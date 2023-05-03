@@ -1,4 +1,4 @@
 export enum API {
-  baseURL = "https://renuver-api.herokuapp.com",
-  cellphones = "/",
+	baseURL = 'https://renuver-api.herokuapp.com',
+	cellphones = '/',
 }

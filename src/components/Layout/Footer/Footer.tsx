@@ -1,65 +1,65 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import styles from "./footer.module.scss";
-import { Icons } from "@/constants/assets.constants";
-import { Routing } from "@/constants/routing.constants";
+import Link from 'next/link';
+import Image from 'next/image';
+import { Icons } from '@/constants/assets.constants';
+import { Routing } from '@/constants/routing.constants';
+import styles from './footer.module.scss';
 
-const Footer = ({}) => {
-  const links = [
-    {
-      label: "Quienes somos",
-      to: Routing.US,
-    },
-    {
-      label: "Garantía Renuver",
-      to: Routing.WARRANTY,
-    },
-    {
-      label: "¿Qué es un iphone reacondicionado?",
-      to: Routing.IPHONE_REFURBISHED,
-    },
-    {
-      label: "Preguntas Frecuentes",
-      to: Routing.FQ,
-    },
-  ];
+const year = new Date().getFullYear();
+const links = [
+	{
+		label: '¿Quiénes somos?',
+		to: Routing.US,
+	},
+	{
+		label: 'Garantía Renuver',
+		to: Routing.WARRANTY,
+	},
+	{
+		label: '¿Qué es un iphone reacondicionado?',
+		to: Routing.IPHONE_REFURBISHED,
+	},
+	{
+		label: 'Preguntas Frecuentes',
+		to: Routing.FQ,
+	},
+];
 
-  const medias = [
-    {
-      media: "Facebook",
-      icon: Icons.FACEBOOK,
-      to: Routing.FACEBOOK,
-    },
-    {
-      media: "Instagram",
-      icon: Icons.INSTAGRAM,
-      to: Routing.INSTAGRAM,
-    },
-  ];
+const medias = [
+	{
+		media: 'Facebook',
+		icon: Icons.FACEBOOK,
+		to: Routing.FACEBOOK,
+	},
+	{
+		media: 'Instagram',
+		icon: Icons.INSTAGRAM,
+		to: Routing.INSTAGRAM,
+	},
+];
 
-  return (
-    <footer id={styles.footer}>
-      <div className={styles.container}>
-        <div className={styles.linksContainer}>
-          {links.map(({ label, to }, idx) => (
-            <Link href={to} key={idx}>
-              {label}
-            </Link>
-          ))}
-        </div>
-        <div className={styles.mediaContainer}>
-          {medias.map(({ media, to, icon }, idx) => (
-            <Link href={to} className={styles.media} key={idx}>
-              <Image src={icon} alt={`${media} logo`} layout="fill" />
-            </Link>
-          ))}
-        </div>
-      </div>
+const Footer = (): JSX.Element => {
+	return (
+		<footer id={styles.footer}>
+			<div className={styles.container}>
+				<div className={styles.linksContainer}>
+					{links.map(({ label, to }, idx) => (
+						<Link href={to} key={idx}>
+							{label}
+						</Link>
+					))}
+				</div>
+				<div className={styles.mediaContainer}>
+					{medias.map(({ media, to, icon }, idx) => (
+						<Link href={to} className={styles.media} key={idx} target="_blank">
+							<Image src={icon} alt={`${media} logo`} fill />
+						</Link>
+					))}
+				</div>
+			</div>
 
-      <p>©2022 Renúver. Todos los derechos reservados.</p>
-    </footer>
-  );
+			<p>©{year} Renúver. Todos los derechos reservados.</p>
+		</footer>
+	);
 };
 
 export default Footer;

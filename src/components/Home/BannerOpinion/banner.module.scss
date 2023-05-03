@@ -1,183 +1,184 @@
 @import '@/styles/commons.scss';
 
 #container {
-    position: relative;
-    padding: get-vw(25px) get-vw(15px);
+	position: relative;
+	padding: get-vw(25px) get-vw(15px);
 
-    @include responsive() {
-        padding: get-vw(170px, 'desktop') get-vw(115px, 'desktop');
-    }
+	@include responsive() {
+		padding: get-vw(170px, 'desktop') get-vw(115px, 'desktop');
+	}
 
-    h2 {
-        font-size: get-vw(25px);
-        line-height: get-vw(30px);
-        font-weight: bold;
-        color: $color-black;
-        margin-bottom: 0;
-        text-align: center;
+	h2 {
+		font-size: get-vw(25px);
+		line-height: get-vw(30px);
+		font-weight: bold;
+		color: $color-black;
+		margin-bottom: 0;
+		text-align: center;
 
-        @include responsive() {
-            font-size: get-vw(40px, 'desktop');
-            line-height: get-vw(47px, 'desktop');
-            br {
-                display: none;
-            }
-        }
-    }
+		@include responsive() {
+			font-size: get-vw(40px, 'desktop');
+			line-height: get-vw(47px, 'desktop');
+			br {
+				display: none;
+			}
+		}
+	}
 
-    .content {
-        display: flex;
-        justify-content: space-between;
-        gap: get-vw(15px);
+	.content {
+		display: flex;
+		justify-content: space-between;
+		gap: get-vw(15px);
 
-        @include responsive() {
-            gap: get-vw(80px, 'desktop');
-        }
-    }
+		@include responsive() {
+			gap: get-vw(80px, 'desktop');
+		}
+	}
 
-    .image {
-        position: relative;
-        min-width: get-vw(172px);
-        width: get-vw(172px);
-        height: get-vw(210px);
+	.image {
+		position: relative;
+		min-width: get-vw(172px);
+		width: get-vw(172px);
+		height: get-vw(210px);
 
-        >img {
-            object-fit: cover;
-        }
+		> img {
+			object-fit: cover;
+		}
 
-        @include responsive() {
-            min-width: get-vw(369px, 'desktop');
-            width: get-vw(369px, 'desktop');
-            height: get-vw(449px, 'desktop');
-        }
-    }
+		@include responsive() {
+			min-width: get-vw(369px, 'desktop');
+			width: get-vw(369px, 'desktop');
+			height: get-vw(449px, 'desktop');
+		}
+	}
 
-    .mySwipper{
-        padding-top: get-vw(35px);
-        @include responsive() {
-            padding-top: get-vw(45px, 'desktop');
-        }
-    }
+	.mySwipper {
+		padding-top: get-vw(35px);
+		@include responsive() {
+			padding-top: get-vw(45px, 'desktop');
+		}
+	}
 
-    .nextButton, .prevButton {
-        width: get-vw(20px);
-        height: get-vw(20px);
-        position: absolute;
-        top: 53%;
-        box-shadow: 0px 1.71073px 6.84293px $color-shadow;
-        border-radius: 100%;
-        border: none;
-        z-index: 10;
-        background-color: $color-white;
-        &:hover {
-        box-shadow: 0px 4.5px 6.84293px $color-shadow;
-        }
-        &:active{
-            box-shadow: 0px 2px 2px $color-shadow;
-            background-color: $color-primary-light;
-        }
-        @include flexCenter();
-        @include responsive() {
-            width: get-vw(64px, 'desktop');
-            height: get-vw(64px, 'desktop');
-        }
+	.nextButton,
+	.prevButton {
+		display: none;
 
-        .arrow {
-            position: relative;
-            width: get-vw(10px);
-            height: get-vw(10px);
+		@include responsive() {
+			width: get-vw(64px, 'desktop');
+			height: get-vw(64px, 'desktop');
+			position: absolute;
+			top: 53%;
+			box-shadow: 0px 1.71073px 6.84293px $color-shadow;
+			border-radius: 100%;
+			border: none;
+			z-index: 10;
+			background-color: $color-white;
+			&:hover {
+				box-shadow: 0px 4.5px 6.84293px $color-shadow;
+			}
+			&:active {
+				box-shadow: 0px 2px 2px $color-shadow;
+				background-color: $color-primary-light;
+			}
+			@include flexCenter();
+		}
 
-            @include responsive() {
-                width: get-vw(32px, 'desktop');
-                height: get-vw(32px, 'desktop');
-            }
-        }
-    }
+		.arrow {
+			display: none;
 
-    .nextButton {
-        right: 0;
-        margin-right: 10px;
-        @include responsive() {
-            margin-right: get-vw(25px, 'desktop');
-        }
-    }
+			@include responsive() {
+				display: block;
+				position: relative;
+				width: get-vw(32px, 'desktop');
+				height: get-vw(32px, 'desktop');
+			}
+		}
+	}
 
-    .prevButton {
-        left: 0;
-        margin-left: 10px;
-        @include responsive() {
-            margin-left: get-vw(25px, 'desktop');
-        }
+	.nextButton {
+		right: 0;
+		margin-right: 10px;
+		@include responsive() {
+			margin-right: get-vw(25px, 'desktop');
+		}
+	}
 
-        .arrow {
-            transform: rotate(180deg);
-        }
-    }
+	.prevButton {
+		left: 0;
+		margin-left: 10px;
+		@include responsive() {
+			margin-left: get-vw(25px, 'desktop');
+		}
 
-    .info {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        position: relative;
-        padding-top: get-vw(20px);
-        padding-bottom: get-vw(30px);
+		.arrow {
+			transform: rotate(180deg);
+		}
+	}
 
-        @include responsive() {
-            padding-top: get-vw(40px, 'desktop');
-            padding-bottom: get-vw(50px, 'desktop');
-        }
-        
-        h3 {
-            font-size: get-vw(20px);
-            line-height: get-vw(23px);
-            font-weight: normal;
-            color: $color-black;
-            margin-bottom: get-vw(30px);
-            width: 90%;
-    
-            @include responsive() {
-                font-size: get-vw(40px, 'desktop');
-                line-height: get-vw(50px, 'desktop');
-                margin-bottom: get-vw(27px, 'desktop');
-            }
+	.info {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		position: relative;
+		padding-top: get-vw(20px);
+		padding-bottom: get-vw(30px);
 
-            span {
-                font-family: 'Palanquin', sans-serif;
-            }
-        }
+		@include responsive() {
+			padding-top: get-vw(40px, 'desktop');
+			padding-bottom: get-vw(50px, 'desktop');
+		}
 
-        .quote {
-            font-size: get-vw(71px);
-            line-height: get-vw(20px);
-            font-weight: 400;
-            font-family: 'Palanquin', sans-serif;
+		.description {
+			font-size: get-vw(20px);
+			line-height: get-vw(23px);
+			font-weight: normal;
+			color: $color-black;
+			margin-bottom: get-vw(30px);
+			width: 90%;
 
-            @include responsive() {
-                font-size: get-vw(150px, 'desktop');
-                line-height: get-vw(20px, 'desktop');
-            }
-        }
+			@include responsive() {
+				font-size: get-vw(35px, 'desktop');
+				line-height: get-vw(50px, 'desktop');
+				margin-bottom: get-vw(27px, 'desktop');
+			}
 
-        p {
-            font-size: get-vw(12px);
-            line-height: get-vw(14px);
-            font-weight: 400;
+			span {
+				font-weight: bold;
+				font-family: 'Elephant';
+			}
+		}
 
-            &:last-child {
-                color: $color-neutro-600;
-            }
-    
-            @include responsive() {
-                font-size: get-vw(24px, 'desktop');
-                line-height: get-vw(28px, 'desktop');
-                margin-bottom: get-vw(6px, 'desktop');;
+		.quote {
+			font-size: get-vw(71px);
+			line-height: get-vw(20px);
+			font-weight: bold;
+			font-family: 'Elephant';
 
-                &:last-child {
-                    font-size: get-vw(18px, 'desktop');
-                    line-height: get-vw(21px, 'desktop');
-                }
-            }
-        }
-    
-    }
+			@include responsive() {
+				font-size: get-vw(130px, 'desktop');
+				line-height: get-vw(20px, 'desktop');
+			}
+		}
+
+		p {
+			font-size: get-vw(12px);
+			line-height: get-vw(14px);
+			font-weight: 400;
+
+			&:last-child {
+				color: $color-neutro-600;
+			}
+
+			@include responsive() {
+				font-size: get-vw(24px, 'desktop');
+				line-height: get-vw(28px, 'desktop');
+				margin-bottom: get-vw(6px, 'desktop');
+
+				&:last-child {
+					font-size: get-vw(18px, 'desktop');
+					line-height: get-vw(21px, 'desktop');
+				}
+			}
+		}
+	}
 }

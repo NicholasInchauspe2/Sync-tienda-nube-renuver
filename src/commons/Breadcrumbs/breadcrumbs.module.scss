@@ -1,0 +1,74 @@
+@import '@/styles/commons.scss';
+
+#breadcrumbsInPlp {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding-left: get-vw(5px);
+	margin-bottom: get-vw(20px);
+	gap: get-vw(23px);
+
+	@include responsive() {
+		margin-bottom: get-vw(50px, 'desktop');
+		padding: 0;
+		gap: get-vw(35px, 'desktop');	
+	}
+
+	.crumb {
+		display: flex;
+		align-items: center;
+		gap: get-vw(35px, 'desktop');
+
+		&:last-child {
+			.arrowContainer {
+				display: none;
+			}
+		}
+
+		&:first-of-type {
+			p {
+				display: block;
+			}
+		}
+
+		p {
+			display: none;
+			font-weight: 600;
+			font-size: get-vw(11px);
+			text-transform: capitalize;
+	
+			@include responsive() {
+				display: block;
+				font-weight: 500;
+				font-size: get-vw(19px, 'desktop');
+				font-family: $secondary-font;
+				color: $color-neutro-400;
+			}
+		}
+	
+	}
+
+	.arrowLeftContainer, .arrowContainer {
+		position: relative;
+		width: get-vw(24px);
+		height: get-vw(24px);
+
+		@include responsive() {	
+			width: get-vw(35px, 'desktop');
+			height: get-vw(35px, 'desktop');
+		}
+	}
+
+	.arrowLeftContainer {
+		@include responsive() {
+			display: none;
+		}
+	}
+
+	.arrowContainer {
+		display: none;
+		@include responsive() {
+			display: block;
+		}
+	}
+}

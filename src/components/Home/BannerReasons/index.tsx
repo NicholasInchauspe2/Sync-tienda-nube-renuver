@@ -1,1 +1,1 @@
-export { default } from "./SectionReasons";
+export { default } from './SectionReasons';

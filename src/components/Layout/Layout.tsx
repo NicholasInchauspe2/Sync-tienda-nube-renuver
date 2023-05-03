@@ -1,18 +1,20 @@
-import React, { FC, PropsWithChildren } from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import styles from "./layout.module.scss";
-import "swiper/css";
-import "swiper/css/pagination";
+import { type FC, type PropsWithChildren } from 'react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import Navbar from './Navbar';
+import Footer from './Footer';
+import WhatsAppBtn from './WhatsApp/WhatsApp';
+import styles from './layout.module.scss';
 
 const Layout: FC<PropsWithChildren> = ({ children }: PropsWithChildren) => {
-  return (
-    <>
-      <Navbar />
-      <main id={styles.main}>{children}</main>
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<Navbar />
+			<main id={styles.main}>{children}</main>
+			<WhatsAppBtn />
+			<Footer />
+		</>
+	);
 };
 
 export default Layout;

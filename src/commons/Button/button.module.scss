@@ -1,59 +1,97 @@
 @import '@/styles/commons.scss';
 
 .button {
-    background-color: $color-black;
-    border-radius: get-vw(96px);
-    padding: get-vw(12px) get-vw(24px);
-    border: none;
-    color: $color-white;
-    font-weight: 600;
-    font-size: get-vw(13px);
-    line-height: get-vw(15px);
-    
-    @include responsive() {
-        border-radius: get-vw(128px, 'desktop');
-        padding: get-vw(16px, 'desktop') get-vw(32px, 'desktop');
-        font-size: get-vw(18px, 'desktop');
-        line-height: get-vw(21px, 'desktop');
-    }
+	background-color: $color-black;
+	border-radius: get-vw(96px);
+	padding: get-vw(12px) get-vw(24px);
+	border: none;
+	color: $color-white;
+	font-weight: 600;
+	font-size: get-vw(13px);
+	line-height: get-vw(15px);
 
-    transition: all 0.3s ease-in-out;
+	@include responsive() {
+		border-radius: get-vw(128px, 'desktop');
+		padding: get-vw(16px, 'desktop') get-vw(32px, 'desktop');
+		font-size: get-vw(18px, 'desktop');
+		line-height: get-vw(21px, 'desktop');
+	}
 
-    &:hover {
-        transform: scale(1.03); 
-        box-shadow: 0 0 7px  $color-shadow;
-    }
+	transition: all 0.3s ease-in-out;
 
-    &:active {
-        background-color: $color-primary-light;
-    }
+	&:hover {
+		transform: scale(1.03);
+		box-shadow: 0 0 7px $color-shadow;
+	}
+
+	&:active {
+		background-color: $color-primary-light;
+	}
 }
-
 
 .secundary {
-    background: transparent;
-    padding: get-vw(10px) get-vw(8px);
-    border: get-vw(2px) solid $color-primary;
-    color: $color-primary;
+	background: transparent;
+	padding: get-vw(10px) get-vw(8px);
+	border: get-vw(2px) solid $color-primary;
+	color: $color-primary;
 
-    @include responsive() {
-        padding: get-vw(17px, 'desktop');
-        border-width: get-vw(2px, 'desktop');
-    }
+	@include responsive() {
+		padding: get-vw(17px, 'desktop');
+		border-width: get-vw(2px, 'desktop');
+	}
 }
 
-.square-green, .square-white {
-    border-radius: get-vw(6px);
-    padding: get-vw(14px) get-vw(22px);
-    min-width: get-vw(125px);
+.square-green,
+.square-white {
+	border-radius: get-vw(6px);
+	padding: get-vw(14px) get-vw(22px);
+	min-width: get-vw(125px);
 }
 
 .square-green {
-    background-color: $color-primary;
+	background-color: $color-primary;
 }
 
 .square-white {
-    background: transparent;
-    color: $color-black;
-    box-shadow: 0px 0.990071px 2.97021px $color-shadow;
+	background: transparent;
+	color: $color-black;
+	box-shadow: 0px 0.990071px 2.97021px $color-shadow;
+}
+
+.orderFilter {
+	background: $color-white;
+	color: $color-black;
+	padding: get-vw(10px) get-vw(42px);
+	box-shadow: 0px 1.33596px 4.00788px $color-shadow;
+	border-radius: get-vw(8px);
+	white-space: nowrap;
+
+	@include responsive() {
+		padding: get-vw(15px, 'desktop') get-vw(50px, 'desktop');
+		border-radius: get-vw(13px, 'desktop');
+	}
+
+	h6 {
+		font-weight: 800;
+		font-size: get-vw(11px);
+		margin-bottom: get-vw(5px);
+		@include responsive() {
+			font-size: get-vw(19px, 'desktop');
+			margin-bottom: get-vw(10px, 'desktop');
+		}
+	}
+
+	p {
+		font-weight: 500;
+		font-size: 10px;
+		color: $color-grey;
+		@include responsive() {
+			font-size: get-vw(18px, 'desktop');
+		}
+	}
+}
+
+.activeOrder {
+	background-color: rgba($color-green, 0.05);
+	border: get-vw(0.33399px) solid $color-green;
 }
