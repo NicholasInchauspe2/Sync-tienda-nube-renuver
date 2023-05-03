@@ -1,84 +1,84 @@
 @import '@/styles/commons.scss';
 
 #container {
-    position: relative;
-    height: get-vw(276px);
-    margin-bottom: get-vw(35px);
+	position: relative;
+	height: get-vw(276px);
+	margin-bottom: get-vw(35px);
 
-    @include responsive() {
-        height: get-vw(500px, 'desktop');
-        margin: 0;
-        display: flex;
-        align-items: flex-end;
-    }
+	@include responsive() {
+		height: get-vw(500px, 'desktop');
+		margin: 0;
+		display: flex;
+		align-items: flex-end;
+	}
 
-    .content {
-        display: flex;
-        justify-content: space-between;
-        height: 100%;
-        width: 100%;
-        padding: get-vw(35px);
-        background-color: $color-primary-light;
+	.content {
+		display: flex;
+		justify-content: space-between;
+		height: 100%;
+		width: 100%;
+		padding: get-vw(35px);
+		background-color: $color-primary-light;
 
-        @include responsive() {
-            padding: get-vw(96px, 'desktop') get-vw(120px, 'desktop');
-            height: get-vw(414px, 'desktop');
-        }
-    }
+		@include responsive() {
+			padding: get-vw(96px, 'desktop') get-vw(120px, 'desktop');
+			height: get-vw(414px, 'desktop');
+		}
+	}
 
-    .image {
-        position: absolute;
-        width: get-vw(114px);
-        height: get-vw(200px);
-        bottom: 0;
-        right: get-vw(26px);
+	.image {
+		position: absolute;
+		width: get-vw(114px);
+		height: get-vw(200px);
+		bottom: 0;
+		right: get-vw(26px);
 
-        @include responsive() {
-            width: get-vw(282px, 'desktop');
-            height: get-vw(495px, 'desktop');
-            right: get-vw(120px, 'desktop');
-        }
-    }
+		@include responsive() {
+			width: get-vw(282px, 'desktop');
+			height: get-vw(495px, 'desktop');
+			right: get-vw(120px, 'desktop');
+		}
+	}
 
-    .imageEnergy {
-        width: get-vw(27px);
-        height: get-vw(27px);
-        margin-bottom: get-vw(10px);
-        position: relative;
+	.imageEnergy {
+		width: get-vw(27px);
+		height: get-vw(27px);
+		margin-bottom: get-vw(10px);
+		position: relative;
 
-        @include responsive() {
-            width: get-vw(48px, 'desktop');
-            height: get-vw(48px, 'desktop');
-            margin-bottom: get-vw(25px, 'desktop');
-        }
-    }
+		@include responsive() {
+			width: get-vw(48px, 'desktop');
+			height: get-vw(48px, 'desktop');
+			margin-bottom: get-vw(25px, 'desktop');
+		}
+	}
 
-    .info {
-        width: get-vw(225px);
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        position: relative;
+	.info {
+		width: get-vw(225px);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		position: relative;
 
-        @include responsive() {
-            width: get-vw(800px, 'desktop');
-        }
-        h3 {
-            font-size: get-vw(20px);
-            line-height: get-vw(26px);
-            font-weight: normal;
-            color: $color-black;
-            margin-bottom: 0;
-    
-            @include responsive() {
-                font-size: get-vw(40px, 'desktop');
-                line-height: get-vw(50px, 'desktop');
-            }
+		@include responsive() {
+			width: get-vw(800px, 'desktop');
+		}
+		h3 {
+			font-size: get-vw(20px);
+			line-height: get-vw(26px);
+			font-weight: normal;
+			color: $color-black;
+			margin-bottom: 0;
 
-            span {
-                color: $color-primary;
-                font-weight: bold;
-            }
-        }
-    }
+			@include responsive() {
+				font-size: get-vw(40px, 'desktop');
+				line-height: get-vw(50px, 'desktop');
+			}
+
+			span {
+				color: $color-primary;
+				font-weight: bold;
+			}
+		}
+	}
 }

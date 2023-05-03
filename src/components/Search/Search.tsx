@@ -1,48 +1,46 @@
-import React, { useState } from "react";
-import Image from "next/image";
-import { Search } from "../../types";
-import styles from "./search.module.scss";
-import { Icons } from "@/constants/assets.constants";
+import { type FC, useState } from 'react';
+import Image from 'next/image';
+import { Icons } from '@/constants/assets.constants';
+import type { ISearch } from '../../types';
+import styles from './search.module.scss';
 
-const Search = ({
-  handleSearch = () => {},
-  hadleChange = () => {},
-  name,
-  variant,
-  placeholder,
-}: Search) => {
-  const [value, setValue] = useState("");
-  const [filter, setFilter] = useState("");
+const Search: FC<ISearch> = ({
+	handleSearch = () => {},
+	hadleChange = () => {},
+	name,
+	variant,
+	placeholder,
+}): JSX.Element => {
+	const [value, setValue] = useState('');
+	const [filter, setFilter] = useState('');
 
-  const onChange = ({ target }: any) => {
-    setValue(target.value);
-    hadleChange(target.value);
-  };
+	const onChange = ({ target: { value } }: any): any => {
+		setValue(value);
+		hadleChange(value);
+	};
 
-  const onClick = () => {
-    handleSearch(value, filter, setValue, setFilter);
-  };
+	const onClick = (): any => handleSearch(value, filter, setValue, setFilter);
 
-  return (
-    <div className={`${styles.container} ${styles[variant]}`}>
-      <select name="" id="filter">
-        <option value="1">Todos los Iphones</option>
-      </select>
-      <input
-        type="search"
-        name={name}
-        id="name"
-        value={value}
-        onChange={onChange}
-        placeholder={placeholder}
-      />
-      <button onClick={onClick}>
-        <div className={styles.logoContainer}>
-          <Image src={Icons.SEARCH} alt="search Logo" layout="fill" />
-        </div>
-      </button>
-    </div>
-  );
+	return (
+		<div className={`${styles.container} ${styles[variant]}`}>
+			<select name="" id="filter">
+				<option value="1">Todos los Iphones</option>
+			</select>
+			<input
+				type="search"
+				name={name}
+				id="name"
+				value={value}
+				onChange={onChange}
+				placeholder={placeholder}
+			/>
+			<button onClick={onClick}>
+				<div className={styles.logoContainer}>
+					<Image src={Icons.SEARCH} alt="search Logo" fill />
+				</div>
+			</button>
+		</div>
+	);
 };
 
 export default Search;

@@ -1,0 +1,27 @@
+@import '@/styles/commons.scss';
+
+.container {
+	@include flexCenter;
+	border-radius: 100%;
+	border: get-vw(0.43px) solid $color-neutro-700;
+	width: get-vw(13px);
+	height: get-vw(13px);
+	box-sizing: border-box;
+
+	@include responsive() {
+		width: get-vw(24px, 'desktop');
+		height: get-vw(24px, 'desktop');
+		border: get-vw(0.76px , 'desktop') solid $color-neutro-700;
+	}
+
+	.color {
+		border-radius: 100%;
+		height: 100%;
+		width: 100%;
+		border: get-vw(0.87px) solid white;
+		@include responsive() {
+			border-width: get-vw(2px, 'desktop');
+		}
+	}
+}
+

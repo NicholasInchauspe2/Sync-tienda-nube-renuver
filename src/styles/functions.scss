@@ -1,5 +1,5 @@
 $base-vw: (
-  "desktop": 1440px,
+  "desktop": 1920px,
   "mobile": 456px
 ) !default;
 
@@ -39,4 +39,37 @@ $breakpoints: (
     justify-content: center;
     align-items: center;
     @content;
+};
+
+@mixin skeleton {
+  animation: skeleton 1.5s linear infinite;
+  background: linear-gradient(45deg, $color-neutro-100, $color-neutro-200);
+  border-radius: get-vw(5px);
+  background-size: 400%;
+};
+
+@keyframes skeleton {
+  0% {
+    background-position: 0 50%;
+    transform: scale(1);
+
+  }
+  50% {
+    background-position: 100% 50%;
+    transform: scale(.99);
+
+  }
+  100% {
+    background-position: 0 50%;
+    transform: scale(1);
+  }
+};
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 };

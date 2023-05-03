@@ -1,140 +1,134 @@
 @import '@/styles/commons.scss';
 
 #container {
-    position: relative;
-    padding: get-vw(25px) get-vw(10px);
+	position: relative;
+	padding: get-vw(25px) get-vw(10px);
 
-    @include flexCenter() {
-        flex-direction: column;
-    }
+	@include flexCenter() {
+		flex-direction: column;
+	}
 
-    @include responsive() {
-        padding: get-vw(130px, 'desktop') get-vw(137px, 'desktop') get-vw(20px, 'desktop') get-vw(137px, 'desktop');
-    }
+	@include responsive() {
+		padding: get-vw(130px, 'desktop') get-vw(137px, 'desktop') get-vw(20px, 'desktop')
+			get-vw(137px, 'desktop');
+	}
 
-    h2 {
-        font-size: get-vw(25px);
-        line-height: get-vw(30px);
-        font-weight: bold;
-        color: $color-black;
-        margin-bottom: get-vw(50px);
-        text-align: center;
+	h2 {
+		font-size: get-vw(25px);
+		line-height: get-vw(30px);
+		font-weight: bold;
+		color: $color-black;
+		margin-bottom: get-vw(50px);
+		text-align: center;
 
-        @include responsive() {
-            font-size: get-vw(40px, 'desktop');
-            line-height: get-vw(47px, 'desktop');
-            margin-bottom: get-vw(45px, 'desktop');
-        }
-    }
+		@include responsive() {
+			font-size: get-vw(40px, 'desktop');
+			line-height: get-vw(47px, 'desktop');
+			margin-bottom: get-vw(45px, 'desktop');
+		}
+	}
 
-
-    .content {
-        display: grid;
+	.content {
+		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-gap: get-vw(6px) get-vw(9px);
-        width: 100%;
+		width: 100%;
 
-        @include responsive() {
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: get-vw(13px, 'desktop');
-        }
+		@include responsive() {
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: get-vw(13px, 'desktop');
+		}
 
+		.card {
+			@include flexCenter() {
+				flex-direction: column;
+				justify-content: flex-start;
+			}
+			width: 100%;
+			padding: get-vw(30px) 0;
+			text-align: center;
+			margin: 0 auto;
+			border: get-vw(0.8px) solid $color-white-200;
+			border-radius: get-vw(9px);
+			text-decoration: none;
+			transition: all 0.5s ease-in-out;
 
-        .card {
-            @include flexCenter() {
-                flex-direction: column;
-                justify-content: flex-start;
-            }
-            width: 100%;
-            padding: get-vw(30px) 0;
-            text-align: center;
-            margin: 0 auto;
-            border: get-vw(0.8px) solid $color-white-200;
-            border-radius: get-vw(9px);
-            text-decoration: none;
-            transition: all 0.5s ease-in-out;
-            
-            @include responsive() {
-                width: get-vw(273px, 'desktop');
-                border-radius: get-vw(13px, 'desktop');
-                padding: get-vw(40px , 'desktop') 0;
+			@include responsive() {
+				width: get-vw(273px, 'desktop');
+				border-radius: get-vw(13px, 'desktop');
+				padding: get-vw(40px, 'desktop') 0;
 
-                &:hover {
-                    transform: scale(1.02); 
-                    border-color: $color-primary;
-                    box-shadow: 0 0 10px $color-shadow;
-                }
-            }
+				&:hover {
+					transform: scale(1.02);
+					border-color: $color-primary;
+					box-shadow: 0 0 10px $color-shadow;
+				}
+			}
 
-            .image {
-                position: relative;
-                width: get-vw(128.5px);
-                height: get-vw(150px);
-                margin-bottom: get-vw(17px);
-                object-fit: cover;
-        
-                @include responsive() {
-                    width: get-vw(171.5px, 'desktop');
-                    height: get-vw(200px, 'desktop');
-                    margin-bottom: get-vw(19px, 'desktop');
-                }
-            }
+			.image {
+				position: relative;
+				width: get-vw(128.5px);
+				height: get-vw(150px);
+				margin-bottom: get-vw(17px);
+				object-fit: cover;
 
-           
+				@include responsive() {
+					width: get-vw(171.5px, 'desktop');
+					height: get-vw(200px, 'desktop');
+					margin-bottom: get-vw(19px, 'desktop');
+				}
+			}
 
-            h4 {
-                font-size: get-vw(11px);
-                line-height: get-vw(13px);
-                font-weight: 800;
-                color: $color-black;
-                margin-bottom: get-vw(4px);
-        
-                @include responsive() {
-                    font-size: get-vw(15px, 'desktop');
-                    line-height: get-vw(18px, 'desktop');
-                    margin-bottom: get-vw(6px, 'desktop');
-                    height: auto;
-                }
-            }
+			h4 {
+				font-size: get-vw(11px);
+				line-height: get-vw(13px);
+				font-weight: 800;
+				color: $color-black;
+				margin-bottom: get-vw(4px);
 
-            p {
-                font-size: get-vw(10px);
-                line-height: get-vw(12px);
-                font-weight: 500;
-                color: $color-neutro-600;
-        
-                @include responsive() {
-                    font-size: get-vw(14px, 'desktop');
-                    line-height: get-vw(17px, 'desktop');
-                }
-            }
-        }
+				@include responsive() {
+					font-size: get-vw(15px, 'desktop');
+					line-height: get-vw(18px, 'desktop');
+					margin-bottom: get-vw(6px, 'desktop');
+					height: auto;
+				}
+			}
 
-        .blocked{
-            cursor: default;
-            pointer-events: none;
-            position: relative;
+			p {
+				font-size: get-vw(10px);
+				line-height: get-vw(12px);
+				font-weight: 500;
+				color: $color-neutro-600;
 
-            &::after{
-                top:0;
-                position: absolute;
-                content: '';
-                height: 100%;
-                width: 100%;
-                background-color: $color-shadow;
-                border-radius: get-vw(7px);
+				@include responsive() {
+					font-size: get-vw(14px, 'desktop');
+					line-height: get-vw(17px, 'desktop');
+				}
+			}
+		}
 
-    
-                @include responsive() {
-                    border-radius: get-vw(10px, 'desktop');
-                }
+		.blocked {
+			cursor: default;
+			pointer-events: none;
+			position: relative;
 
-            }
-            
-            .image{
-                    filter: grayscale(1);
-            }
+			&::after {
+				top: 0;
+				position: absolute;
+				content: '';
+				height: 100%;
+				width: 100%;
+				background-color: $color-shadow;
+				border-radius: get-vw(7px);
 
-        }
-    }
+				@include responsive() {
+					border-radius: get-vw(10px, 'desktop');
+				}
+			}
+
+			.image {
+				filter: grayscale(1);
+			}
+		}
+	}
 }

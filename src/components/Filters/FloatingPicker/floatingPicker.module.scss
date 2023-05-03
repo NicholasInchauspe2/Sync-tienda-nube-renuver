@@ -1,0 +1,75 @@
+@import '@/styles/commons.scss';
+
+.container {
+    @include flexCenter;
+    position: fixed;
+    width: get-vw(268px);
+    height: get-vw(44px);
+    background-color: $color-primary;
+    border-radius: get-vw(128px);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 100;
+
+    @include responsive() {
+        display: none;
+    }
+
+    button {
+        width: 50%;
+        height: 100%;
+        background: transparent;
+        color: $color-white;
+        border: none;
+        transition: all 0.3s ease-in-out;
+        padding-left: get-vw(40px);
+        padding-right: get-vw(15px);
+
+        @include flexCenter{
+            justify-content: center;
+            gap: get-vw(7px)
+        };
+
+        &:last-of-type {
+            padding-left: get-vw(15px);
+            padding-right: get-vw(40px);
+        }
+
+
+        &:active {
+            -webkit-box-shadow: inset 0px 0px 50px 0px $color-shadow;
+            -moz-box-shadow: inset 0px 0px 50px 0px $color-shadow;
+            box-shadow: inset 0px 0px 50px 0px $color-shadow;
+
+        }
+
+        p {
+            font-weight: 700;
+            font-size: get-vw(14px);
+            line-height: get-vw(16px);
+        }
+
+        .filterIcon {
+            position: relative;
+            width: get-vw(15px);
+            height: get-vw(12px);
+        }
+
+        .orderIcon {
+            position: relative;
+            width: get-vw(20px);
+            height: get-vw(17px);
+        }
+    }
+
+    span {
+        width: get-vw(15px);
+        height: 0;
+        border: 1px solid $color-white;
+        transform: rotate(90deg);
+        position: absolute;
+    }
+}

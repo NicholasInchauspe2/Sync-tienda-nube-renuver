@@ -1,0 +1,98 @@
+[
+    {
+        "name": "Iphone name",
+        "storage": "254GB",
+        "color": "blue",
+        "usefulLife": 85,
+        "rating": "Muy Bueno",
+        "price": 300000,
+        "image": "/images/iphone7.jpg",
+        "brand": "apple",
+        "specifications": {
+            "usefulLife": 84,
+            "storage": 64,
+            "color": "#235467",
+            "quality": "Muy Bueno"
+        }
+    },
+    {
+        "name": "Iphone name",
+        "storage": "254GB",
+        "color": "blue",
+        "usefulLife": 85,
+        "rating": "Muy Bueno",
+        "price": 300000,
+        "image": "/images/iphone7.jpg",
+        "brand": "apple",
+        "specifications": {
+            "usefulLife": 84,
+            "storage": 64,
+            "color": "red",
+            "quality": "Muy Bueno"
+        }
+    },
+    {
+        "name": "Iphone name",
+        "storage": "254GB",
+        "color": "blue",
+        "usefulLife": 85,
+        "rating": "Muy Bueno",
+        "price": 300000,
+        "image": "/images/iphone7.jpg",
+        "brand": "apple",
+        "specifications": {
+            "usefulLife": 84,
+            "storage": 64,
+            "color": "#933299",
+            "quality": "Muy Bueno"
+        }
+    },
+    {
+        "name": "Iphone name",
+        "storage": "254GB",
+        "color": "blue",
+        "usefulLife": 85,
+        "rating": "Muy Bueno",
+        "price": 300000,
+        "image": "/images/iphone7.jpg",
+        "brand": "apple",
+        "specifications": {
+            "usefulLife": 84,
+            "storage": 64,
+            "color": "#235467",
+            "quality": "Muy Bueno"
+        }
+    },
+    {
+        "name": "Iphone name",
+        "storage": "254GB",
+        "color": "blue",
+        "usefulLife": 85,
+        "rating": "Muy Bueno",
+        "price": 300000,
+        "image": "/images/iphone7.jpg",
+        "brand": "apple",
+        "specifications": {
+            "usefulLife": 84,
+            "storage": 64,
+            "color": "#235467",
+            "quality": "Muy Bueno"
+        }
+    },
+    {
+        "name": "Iphone name",
+        "storage": "254GB",
+        "color": "blue",
+        "usefulLife": 85,
+        "rating": "Muy Bueno",
+        "price": 300000,
+        "image": "/images/iphone7.jpg",
+        "brand": "apple",
+        "specifications": {
+            "usefulLife": 84,
+            "storage": 64,
+            "color": "#235467",
+            "quality": "Muy Bueno"
+        }
+    }
+]

@@ -1,12 +1,11 @@
-import { FC } from "react";
-import HomeView from "@/components/Home";
+import HomeView from '@/components/Home';
 
-const Home: FC = () => {
-  return (
-    <>
-      <HomeView />
-    </>
-  );
+const Home = (): JSX.Element => {
+	return (
+		<>
+			<HomeView />
+		</>
+	);
 };
 
 export default Home;

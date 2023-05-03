@@ -1,0 +1,61 @@
+@import '@/styles/commons.scss';
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    max-width: get-vw(190px);
+    padding: get-vw(27px) get-vw(30px) get-vw(35px) get-vw(30px);
+    background: $color-white;
+    border: get-vw(1px) solid $color-white-200;
+    border-radius: get-vw(9px);
+
+    @include responsive() {
+        padding: get-vw(63px, 'desktop');
+        max-width: get-vw(358px, 'desktop');
+        border-width: get-vw(1px, 'desktop');
+        border-radius: get-vw(16px, 'desktop');
+    }
+
+    .imageContainer {
+        position: relative;
+        width: get-vw(126px);
+        height: get-vw(126px);
+        margin-bottom: get-vw(11px);
+        @include skeleton;
+
+        @include responsive() {
+            width: get-vw(228px, 'desktop');
+            height: get-vw(228px, 'desktop');
+            margin-bottom: get-vw(44px, 'desktop');
+        }
+    }
+
+    .shareContainer {
+        position: absolute;
+        width: get-vw(15px);
+        height: get-vw(15px);
+        top: get-vw(12px);
+        right: get-vw(10px);
+
+        @include responsive() {
+            width: get-vw(28px, 'desktop');
+            height: get-vw(28px, 'desktop');
+            top: get-vw(21px, 'desktop');
+            right: get-vw(35px, 'desktop');
+        }
+    }
+
+    .lineText {
+        height: get-vw(5px);
+        @include skeleton;
+        margin-bottom: get-vw(5px);
+
+        @include responsive() {
+            margin-bottom: get-vw(5px, 'desktop');
+        }
+    }
+}
+

@@ -17,6 +17,7 @@
         right: get-vw(18px);
         width: get-vw(167px);
         height: get-vw(274px);
+        filter: drop-shadow( 20px -5px 6px $color-shadow);
 
         @include responsive() {
             right: get-vw(111px, 'desktop');
