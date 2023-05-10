@@ -12,10 +12,10 @@ const Home: FC<ICategoriesProps> = ({ categories }) => {
 	return (
 		<>
 			<BannerPrimary />
+			<BannerQuoter />
 			<BannerReasons />
 			<Categories categories={categories} />
 			{/* <BannerSteps /> */}
-			<BannerQuoter />
 			<BannerOpinion />
 			<BannerEco />
 		</>

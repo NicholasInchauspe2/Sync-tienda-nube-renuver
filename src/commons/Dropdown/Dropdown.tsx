@@ -76,7 +76,7 @@ const Dropdown: FC<DropdownProps> = ({
 		}
 	}, [parentOnClick, setParentOnClick]);
 
-	const isLabel = label !== null;
+	const isLabel = label !== undefined;
 
 	return (
 		<div className={`${style.container} ${isLabel ? style.containerWithLabel : ''}`}>
