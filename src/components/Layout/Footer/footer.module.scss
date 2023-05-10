@@ -21,11 +21,11 @@
 		}
 	}
 
-	.linksContainer {
-		@include flexCenter() {
-			justify-content: flex-start;
-			gap: get-vw(13px);
-		}
+    .linksContainer {
+        @include flexCenter() {
+            justify-content: center;
+            gap: get-vw(13px);
+        }
 
 		@include responsive() {
 			gap: get-vw(40px, 'desktop');

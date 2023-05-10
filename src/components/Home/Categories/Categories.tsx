@@ -1,18 +1,13 @@
+import { type FC } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { currencyFormatter } from '@/utils';
-import Mock from './mockProducts.json';
+// import { currencyFormatter } from "@/utils";
+import { type ICategoriesProps } from '@/types';
 import styles from './section.module.scss';
 
-const SectionReasons = (): JSX.Element => {
-	const message = (minPrice: number): string => {
-		return minPrice > 0
-			? `a partir de ${currencyFormatter({
-					currency: 'ARS',
-					value: minPrice,
-					minimumFractionDigits: 0,
-			  })}`
-			: 'Próximamente disponible';
+const SectionReasons: FC<ICategoriesProps> = ({ categories }) => {
+	const message = (minPrice: string): string => {
+		return minPrice !== '#N/A' ? `a partir de ${minPrice}` : 'Próximamente disponible';
 	};
 
 	const categoryClass = (blocked?: boolean): string => {
@@ -21,15 +16,15 @@ const SectionReasons = (): JSX.Element => {
 
 	return (
 		<section id={styles.container}>
-			<h2>Encontrá el iPhone ideal para vos</h2>
+			<h2>Encontrá el celu ideal para vos</h2>
 			<div className={styles.content}>
-				{Mock.map((category) => (
+				{categories?.map((category) => (
 					<Link
 						key={category.id}
 						className={categoryClass(category.blocked)}
 						href={`${category.url}`}
 					>
-						<figure className={styles.image}>
+						<figure className={styles.imageContainer}>
 							<Image
 								src={category.image}
 								alt="cellphone image"

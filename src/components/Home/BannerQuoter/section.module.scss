@@ -1,0 +1,53 @@
+@import '@/styles/commons.scss';
+
+#container {
+    position: relative;
+    padding: get-vw(53px) get-vw(50px) get-vw(25px) get-vw(50px);
+
+    @include flexCenter() {
+        flex-direction: column;
+    }
+
+    @include responsive() {
+        padding: get-vw(130px, 'desktop') get-vw(137px, 'desktop') get-vw(25px, 'desktop') get-vw(137px, 'desktop');
+    }
+
+    h2 {
+        font-size: get-vw(25px);
+        line-height: get-vw(30px);
+        font-weight: bold;
+        color: $color-black;
+        margin-bottom: get-vw(35px);
+        text-align: center;
+        span {
+            font-size: get-vw(27px);
+            font-family: $tertiary-font;
+            font-weight: 100;
+            color: $color-tertiary;
+            border-radius: 10px;
+            @include responsive() {
+                font-size: get-vw(43px, 'desktop');
+            }
+        }
+
+        @include responsive() {
+            font-size: get-vw(40px, 'desktop');
+            line-height: get-vw(47px, 'desktop');
+            margin-bottom: get-vw(25px, 'desktop');
+        }
+    }
+
+
+    // p {
+    //     font-family: $secondary-font;
+    //     font-size: get-vw(12px);
+    //     line-height: get-vw(14px);
+    //     font-weight: 400;
+    //     color: $color-neutro-600;
+
+    //     @include responsive() {
+    //         font-size: get-vw(20px, 'desktop');
+    //         line-height: get-vw(24px, 'desktop');
+    //     }
+    // }
+}

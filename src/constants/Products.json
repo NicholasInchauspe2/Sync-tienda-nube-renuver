@@ -1,0 +1,250 @@
+[
+  {
+    "name": "Apple",
+    "icon": "linkToAppleIcon",
+    "series": [
+      {
+        "name": "iPhone 7",
+        "models": [{ "name": "iPhone 7" }, { "name": "iPhone 7 Plus" }]
+      },
+      {
+        "name": "iPhone 8",
+        "models": [{ "name": "iPhone 8" }, { "name": "iPhone 8 Plus" }]
+      },
+      {
+        "name": "iPhone X, XR, XS",
+        "models": [
+          { "name": "iPhone X" },
+          { "name": "iPhone XR" },
+          { "name": "iPhone XS" },
+          { "name": "iPhone XS Max" }
+        ]
+      },
+      {
+        "name": "iPhone 11",
+        "models": [
+          { "name": "iPhone 11" },
+          { "name": "iPhone 11 Pro" },
+          { "name": "iPhone 11 Pro Max" }
+        ]
+      },
+      {
+        "name": "iPhone SE",
+        "models": [
+          { "name": "iPhone SE (2020)" },
+          { "name": "iPhone SE (2022)" }
+        ]
+      },
+      {
+        "name": "iPhone 12",
+        "models": [
+          { "name": "iPhone 12 Mini" },
+          { "name": "iPhone 12" },
+          { "name": "iPhone 12 Pro" },
+          { "name": "iPhone 12 Pro Max" }
+        ]
+      },
+      {
+        "name": "iPhone 13",
+        "models": [
+          { "name": "iPhone 13 Mini" },
+          { "name": "iPhone 13" },
+          { "name": "iPhone 13 Pro" },
+          { "name": "iPhone 13 Pro Max" }
+        ]
+      },
+      {
+        "name": "iPhone 14",
+        "models": [
+          { "name": "iPhone 14" },
+          { "name": "iPhone 14 Plus" },
+          { "name": "iPhone 14 Pro" },
+          { "name": "iPhone 14 Pro Max" }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Samsung",
+    "icon": "linkToSamsungIcon",
+    "series": [
+      {
+        "name": "Galaxy S9",
+        "models": [{ "name": "Galaxy S9" }, { "name": "Galaxy S9+" }]
+      },
+      {
+        "name": "Galaxy Note9",
+        "models": [{ "name": "Galaxy Note9" }]
+      },
+      {
+        "name": "Galaxy S10",
+        "models": [
+          { "name": "Galaxy S10e" },
+          { "name": "Galaxy S10" },
+          { "name": "Galaxy S10+" }
+        ]
+      },
+      {
+        "name": "Galaxy Note10",
+        "models": [{ "name": "Galaxy Note10" }, { "name": "Galaxy Note10+" }]
+      },
+      {
+        "name": "Galaxy S20",
+        "models": [
+          { "name": "Galaxy S20" },
+          { "name": "Galaxy S20+" },
+          { "name": "Galaxy S20 Ultra" }
+        ]
+      },
+      {
+        "name": "Galaxy Note20",
+        "models": [
+          { "name": "Galaxy Note20" },
+          { "name": "Galaxy Note20 Ultra" }
+        ]
+      },
+      {
+        "name": "Galaxy S21",
+        "models": [
+          { "name": "Galaxy S21" },
+          { "name": "Galaxy S21+" },
+          { "name": "Galaxy S21 Ultra" }
+        ]
+      },
+      {
+        "name": "Galaxy Note21",
+        "models": [
+          { "name": "Galaxy Note21" },
+          { "name": "Galaxy Note21 Ultra" }
+        ]
+      },
+      {
+        "name": "Galaxy Z Flip",
+        "models": [{ "name": "Galaxy Z Flip" }, { "name": "Galaxy Z Flip 5G" }]
+      },
+      {
+        "name": "Galaxy Fold",
+        "models": [{ "name": "Galaxy Fold" }, { "name": "Galaxy Z Fold2" }]
+      }
+    ]
+  },
+  {
+    "name": "Motorola",
+    "icon": "linkToMotorolaIcon",
+    "series": [
+      {
+        "name": "Moto G6",
+        "models": [
+          { "name": "Moto G6" },
+          { "name": "Moto G6 Plus" },
+          { "name": "Moto G6 Play" }
+        ]
+      },
+      {
+        "name": "Moto Z3",
+        "models": [{ "name": "Moto Z3" }, { "name": "Moto Z3 Play" }]
+      },
+      {
+        "name": "Moto G7",
+        "models": [
+          { "name": "Moto G7" },
+          { "name": "Moto G7 Plus" },
+          { "name": "Moto G7 Play" },
+          { "name": "Moto G7 Power" }
+        ]
+      },
+      {
+        "name": "Moto Z4",
+        "models": [{ "name": "Moto Z4" }]
+      },
+      {
+        "name": "Moto G8",
+        "models": [
+          { "name": "Moto G8" },
+          { "name": "Moto G8 Plus" },
+          { "name": "Moto G8 Play" },
+          { "name": "Moto G8 Power" }
+        ]
+      },
+      {
+        "name": "Moto G Stylus",
+        "models": [{ "name": "Moto G Stylus" }]
+      },
+      {
+        "name": "Moto G Power",
+        "models": [
+          { "name": "Moto G Power" },
+          { "name": "Moto G Power (2021)" }
+        ]
+      },
+      {
+        "name": "Moto G Fast",
+        "models": [{ "name": "Moto G Fast" }]
+      },
+      {
+        "name": "Moto G9",
+        "models": [
+          { "name": "Moto G9" },
+          { "name": "Moto G9 Play" },
+          { "name": "Moto G9 Plus" },
+          { "name": "Moto G9 Power" }
+        ]
+      },
+      {
+        "name": "Moto E6",
+        "models": [
+          { "name": "Moto E6" },
+          { "name": "Moto E6 Plus" },
+          { "name": "Moto E6s" },
+          { "name": "Moto E6 Play" }
+        ]
+      },
+      {
+        "name": "Moto G10",
+        "models": [{ "name": "Moto G10" }, { "name": "Moto G10 Power" }]
+      },
+      {
+        "name": "Moto G30",
+        "models": [{ "name": "Moto G30" }]
+      },
+      {
+        "name": "Moto G60",
+        "models": [{ "name": "Moto G60" }]
+      },
+      {
+        "name": "Moto G100",
+        "models": [{ "name": "Moto G100" }]
+      }
+    ]
+  },
+  {
+    "name": "LG",
+    "icon": "linkToLGIcon",
+    "series": [
+      {
+        "name": "G7",
+        "models": [{ "name": "LG G7 ThinQ" }]
+      },
+      {
+        "name": "V40",
+        "models": [{ "name": "LG V40 ThinQ" }]
+      },
+      {
+        "name": "G8",
+        "models": [{ "name": "LG G8 ThinQ" }]
+      },
+      {
+        "name": "V50",
+        "models": [{ "name": "LG V50 ThinQ" }]
+      },
+      {
+        "name": "G8X",
+        "models": [{ "name": "LG G8X ThinQ" }]
+      },
+      {
+        "name": "V60",
+        "models": [{ "name": "LG V60 ThinQ" }]
+      }
+    ]
+  }
+]

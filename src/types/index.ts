@@ -1,11 +1,12 @@
-import type { Dispatch, SetStateAction, PropsWithChildren } from 'react';
-import type { IProduct } from '@/types/slices';
+import { type Dispatch, type SetStateAction } from 'react';
+import type React from 'react';
+import { type IProduct } from './slices';
 
-export interface IButton extends PropsWithChildren {
+export interface IButton extends React.PropsWithChildren {
 	type?: string;
 	href?: string;
 	isActiveClass?: string;
-	onClick?: () => {};
+	onClick?: () => void;
 }
 
 export type HandleSearch = (
@@ -27,7 +28,7 @@ export interface ISearch {
 
 export interface IMenu {
 	isOpen: boolean;
-	handleClick: () => {};
+	handleClick: () => void;
 }
 
 export interface IBreadcrumbs {
@@ -45,4 +46,17 @@ export interface Icolor {
 
 export interface IFloatingPicker {
 	openFilters: () => void;
+}
+
+export interface ICategory {
+	id: string;
+	name: string;
+	image: string;
+	minPrice: string;
+	url: string;
+	blocked: boolean;
+}
+
+export interface ICategoriesProps {
+	categories: ICategory[];
 }

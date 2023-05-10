@@ -1,20 +1,26 @@
-import { Html, Head, Main, NextScript } from 'next/document';
+import { GTMnoscript } from '@/components/GTM';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-export default function Document(): JSX.Element {
-	return (
-		<Html lang="en">
-			<Head>
-				<link rel="preconnect" href="https://fonts.googleapis.com" />
-				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-				<link
-					href="https://fonts.googleapis.com/css2?family=Palanquin:wght@700&family=Quicksand:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap"
-					rel="stylesheet"
-				/>
-			</Head>
-			<body>
-				<Main />
-				<NextScript />
-			</body>
-		</Html>
-	);
+const NEXT_PUBLIC_FACEBOOK_VERIFICATION = 'cvg0cklpk47c9sdy1c2mvv9lyzx0q7';
+
+export default class WebDocument extends Document {
+	render(): JSX.Element {
+		return (
+			<Html lang="en">
+				<Head>
+					<meta
+						name="facebook-domain-verification"
+						content={`${NEXT_PUBLIC_FACEBOOK_VERIFICATION}`}
+					/>
+					<link rel="preconnect" href="https://fonts.googleapis.com" />
+					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+				</Head>
+				<body>
+					<GTMnoscript />
+					<Main />
+					<NextScript />
+				</body>
+			</Html>
+		);
+	}
 }

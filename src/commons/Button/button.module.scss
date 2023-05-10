@@ -1,32 +1,37 @@
 @import '@/styles/commons.scss';
 
 .button {
-	background-color: $color-black;
-	border-radius: get-vw(96px);
-	padding: get-vw(12px) get-vw(24px);
-	border: none;
-	color: $color-white;
-	font-weight: 600;
-	font-size: get-vw(13px);
-	line-height: get-vw(15px);
+    background-color: $color-black;
+    border-radius: get-vw(96px);
+    padding: get-vw(12px) get-vw(24px);
+    border: none;
+    color: $color-white;
+    font-weight: 600;
+    font-size: get-vw(13px);
+    line-height: get-vw(15px);
+    box-shadow: 0px 3px 10px $color-primary-bold;
+    transition: all 0.3s ease-in-out;
 
-	@include responsive() {
-		border-radius: get-vw(128px, 'desktop');
-		padding: get-vw(16px, 'desktop') get-vw(32px, 'desktop');
-		font-size: get-vw(18px, 'desktop');
-		line-height: get-vw(21px, 'desktop');
-	}
+    
+    @include responsive() {
+        border-radius: get-vw(128px, 'desktop');
+        padding: get-vw(16px, 'desktop') get-vw(32px, 'desktop');
+        font-size: get-vw(18px, 'desktop');
+        line-height: get-vw(21px, 'desktop');
+    }
 
-	transition: all 0.3s ease-in-out;
 
-	&:hover {
-		transform: scale(1.03);
-		box-shadow: 0 0 7px $color-shadow;
-	}
-
-	&:active {
-		background-color: $color-primary-light;
-	}
+    &:hover {
+        transform: scale(1.03); 
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0px 3px 10px $color-shadow-bold;
+    }
+    
+    &:active {
+        transform: scale(0.93); 
+        background-color: $color-primary-light;
+        transition: all 0.3s ease-in-out; 
+    }
 }
 
 .secundary {

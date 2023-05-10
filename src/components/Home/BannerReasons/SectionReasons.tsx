@@ -1,48 +1,59 @@
+import { type FC } from 'react';
 import Image from 'next/image';
-import Button from '@/commons/Button';
+// import Button from "@/commons/Button";
 import { Icons } from '@/constants/assets.constants';
 import styles from './section.module.scss';
-const reasons = [
+
+const REASONS = [
 	{
-		icon: Icons.VERIFIED,
-		title: 'Calidad verificada',
-		description: 'Vendedores seleccionados por su control de calidad riguroso y continuo.',
+		icon: Icons.SELECTION,
+		title: 'Vendedores calificados',
+		description: 'Seleccionamos expertos en reacondicionamiento de electrónica.',
 	},
 	{
-		icon: Icons.LABEL,
-		title: 'La mejor oferta disponible',
-		description: 'Nuestro algoritmo te brinda la mejor calidad al menor precio posible.',
+		icon: Icons.VERIFIED,
+		title: 'Productos verificados',
+		description: 'Cada vendedor certifica el correcto funcionamiento de los equipos.',
 	},
 	{
 		icon: Icons.SHIELD,
-		title: 'Un servicio excelente',
-		description: 'Compra segura y atención al cliente.',
+		title: 'Garantía posventa',
+		description: 'Todos los productos tienen garantía de 12 meses.',
 	},
 	{
 		icon: Icons.ENERGY1,
-		title: 'Impacto positivo',
-		description: 'La alternativa a lo nuevo: reacondicionado y feliz.',
+		title: 'Reducción de descarte',
+		description: 'El consumo de productos reacondicionados disminuye el impacto ambiental.',
 	},
 ];
+const SectionReasons: FC = () => {
+	const classNameCreator = (iconName: string): string => {
+		if (iconName === Icons.SELECTION) {
+			return `${styles.image} ${styles.vendorsSelection}`;
+		}
 
-const SectionReasons = (): JSX.Element => {
+		return styles.image;
+	};
+
 	return (
 		<section id={styles.container}>
-			<h2>¿Por qué comprar en Renúver?</h2>
+			<h2>
+				Renová tu tecnología
+				<br />
+				de forma <span>segura</span> y <span>sustentable</span>
+			</h2>
 			<div className={styles.content}>
-				{reasons.map(({ icon, title, description }, idx) => (
+				{REASONS.map(({ icon, title, description }, idx) => (
 					<div className={styles.card} key={idx}>
-						<figure className={styles.image}>
-							<figure className={styles.image}>
-								<Image src={icon} alt={icon} fill />
-							</figure>
+						<figure className={classNameCreator(icon)}>
+							<Image src={icon} alt={icon} fill />
 						</figure>
 						<h3>{title}</h3>
 						<p>{description}</p>
 					</div>
 				))}
 			</div>
-			<Button type="secundary">Conocé más sobre tus beneficios</Button>
+			{/* <Button type="secundary">Conocé más sobre tus beneficios</Button> */}
 		</section>
 	);
 };

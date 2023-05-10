@@ -1,6 +1,4 @@
 import { type FC, type PropsWithChildren } from 'react';
-import 'swiper/css';
-import 'swiper/css/pagination';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import WhatsAppBtn from './WhatsApp/WhatsApp';

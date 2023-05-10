@@ -1,4 +1,5 @@
 export enum API {
-	baseURL = 'https://renuver-api.herokuapp.com',
-	cellphones = '/',
+	TIENDA_NUBE = 'https://tienda.renuver.com',
+	TIENDA_NUBE_SEARCH = 'https://tienda.renuver.com/search/?q=',
+	GOOGLE_SHEETS = 'https://content-sheets.googleapis.com/v4/spreadsheets',
 }

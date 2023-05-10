@@ -5,12 +5,33 @@ html {
 	line-height: 1;
 	-webkit-text-size-adjust: 100%;
 	box-sizing: border-box;
+
+	@include responsive() {
+		&::-webkit-scrollbar {
+			width: get-vw(8px, "desktop");
+			background: $color-primary;
+		}
+		
+		&::-webkit-scrollbar-track {
+			border-radius: 8px;
+			border: 1px solid $color-neutro-600;
+			background-color: $color-white-200;
+		}
+		
+		&::-webkit-scrollbar-thumb {
+			border-radius: 8px;
+			background-color: $color-primary-bold;
+		}
+	}
 }
+
 *,
 *::before,
 *::after {
 	box-sizing: inherit;
+	font-family: $primary-font;
 }
+
 h1,
 h2,
 h3,
@@ -26,11 +47,11 @@ blockquote,
 figure,
 hr {
 	margin: 0;
-	padding: 0;
+	padding: 0;	
 }
+
 body {
-	background-color: #fff;
-	font-family: $primary-font;
+	background-color: $color-white;
 	-webkit-font-smoothing: antialiased;
 	margin: 0;
 	position: relative;

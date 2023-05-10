@@ -2,7 +2,7 @@
 
 #container {
     position: relative;
-    padding: get-vw(53px) get-vw(67px) get-vw(25px) get-vw(67px);
+    padding: get-vw(53px) get-vw(50px) get-vw(25px) get-vw(50px);
 
     @include flexCenter() {
         flex-direction: column;
@@ -19,11 +19,21 @@
         color: $color-black;
         margin-bottom: get-vw(43px);
         text-align: center;
+        span {
+            font-size: get-vw(27px);
+            font-family: $tertiary-font;
+            font-weight: 100;
+            color: $color-tertiary;
+            border-radius: 10px;
+            @include responsive() {
+                font-size: get-vw(43px, 'desktop');
+            }
+        }
 
         @include responsive() {
             font-size: get-vw(40px, 'desktop');
             line-height: get-vw(47px, 'desktop');
-            margin-bottom: get-vw(45px, 'desktop');
+            margin-bottom: get-vw(55px, 'desktop');
         }
     }
 
@@ -31,10 +41,10 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-bottom: get-vw(45px);
+        // margin-bottom: get-vw(45px);
 
         @include responsive() {
-            margin-bottom: get-vw(80px, 'desktop');
+            // margin-bottom: get-vw(80px, 'desktop');
             width: 100%;
         }
 
@@ -56,14 +66,31 @@
                 position: relative;
                 width: get-vw(35px);
                 height: get-vw(35px);
+                padding: get-vw(20px);
+                border: get-vw(7px) solid transparent;
                 margin-bottom: get-vw(15px);
         
                 @include responsive() {
                     width: get-vw(55px, 'desktop');
                     height: get-vw(55px, 'desktop');
+                    border: get-vw(17px, 'desktop') solid transparent;
+                    padding: get-vw(33px, 'desktop');
                     margin-bottom: get-vw(38px, 'desktop');
                 }
             }
+
+            .vendorsSelection{
+                width: get-vw(50px);
+                height: get-vw(50px);
+                border: none;
+                
+                @include responsive() {
+                    border: none;
+                    width: get-vw(100px, 'desktop');
+                    height: get-vw(100px, 'desktop');
+                }
+            }
+
             h3 {
                 font-size: get-vw(12px);
                 line-height: get-vw(16px);

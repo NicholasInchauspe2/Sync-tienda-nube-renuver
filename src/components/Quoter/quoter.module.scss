@@ -1,0 +1,185 @@
+@import '@/styles/commons.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: get-vw(440px);
+  width: 100%;
+  
+  @include responsive() {
+    height: get-vw(600px, "desktop");
+  }
+
+  .progressContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: get-vw(8px);
+    
+    @include responsive() {
+      margin-bottom: get-vw(15px, 'desktop');
+    }
+    
+    .progressDot {
+      width: get-vw(20px);
+      height: get-vw(20px);
+      border-radius: 50%;
+      margin: 0 get-vw(10px);
+      transition: all 0.3s ease-in-out;
+
+      
+      @include responsive() {
+        width: get-vw(40px, "desktop");
+        height: get-vw(40px, "desktop");
+        margin: 0 get-vw(18px, "desktop");
+      }
+    }
+    
+    .progressDotActive {
+      background-color: $color-primary-bold;
+      transition: all 0.3s ease-in-out;
+    }
+    
+    .progressDotInactive {
+      transition: all 0.3s ease-in-out;
+      background-color: $color-primary-light;
+    }
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: get-vw(20px);
+    padding: get-vw(20px);
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px $color-shadow;
+
+    @include responsive() {
+      width: 90%;
+      height: get-vw(420px, 'desktop');
+      padding: get-vw(10px, 'desktop');
+      margin-top: get-vw(10px, 'desktop');
+      // background-color: red;
+    }
+
+    h3 {
+      font-size: get-vw(24px);
+      line-height: get-vw(20px);
+      font-weight: 600;
+      color: $color-black;
+      margin-bottom: get-vw(0px);
+      text-align: center;       
+        
+      @include responsive() {
+          font-size: get-vw(35px, 'desktop');
+          line-height: get-vw(20px, 'desktop');
+          margin-bottom: get-vw(10px, 'desktop');
+      }
+   }
+  }
+
+    .content{
+      height: 100%;
+      width: 100%;
+      
+      @include responsive() {
+        margin-top: get-vw(6px, "desktop");
+        height: get-vw(300px, 'desktop');
+      }
+
+      .phoneModel{
+        height: 100%;
+        width: 75%;
+        padding: get-vw(20px) 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0px auto;
+        
+        @include responsive(){
+          padding: 0px;
+        }
+
+        >div{
+          @include responsive() {
+            padding-right: get-vw(100px,'desktop');          
+          }
+
+          >div{ /** class = dropdown */
+            border-radius: 12px;
+            border: solid 1px $color-shadow;
+
+            @include responsive(){
+              height: get-vw(50px, 'desktop');
+              width: 70%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: get-vw(23px);
+  width: 100%;
+  padding: 0px get-vw(25px);
+
+  @include responsive() {
+    width: 50%;
+    margin-top: get-vw(25px, "desktop");
+  }
+  
+  .prevButton,
+  .nextButton,
+  .submitButton {
+    background-color: $color-black;
+    border-radius: get-vw(96px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: get-vw(7px) get-vw(20px);
+    border: none;
+    color: $color-white;
+    font-weight: 600;
+    font-size: get-vw(13px);
+    line-height: get-vw(15px);
+    width: get-vw(100px);
+    transition: color 0.3s, transform 0.3s, box-shadow 0.3s ease-in-out;
+
+    @include responsive() {
+      border-radius: get-vw(128px, 'desktop');
+      padding: get-vw(16px, 'desktop') get-vw(32px, 'desktop');
+      font-size: get-vw(18px, 'desktop');
+      line-height: get-vw(21px, 'desktop');
+      width: get-vw(130px, "desktop");
+    }
+  
+    &:hover {
+        transform: scale(1.03); 
+        box-shadow: 0px 3px 10px $color-shadow;
+    }
+  
+    &:active {
+        background-color: $color-primary-light;
+    }
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+
+
+
+

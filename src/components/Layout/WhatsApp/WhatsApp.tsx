@@ -1,4 +1,4 @@
-import { useState, useEffect, type FC } from 'react';
+import { useEffect, useState, type FC } from 'react';
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
 import { Icons, Sounds } from '@/constants/assets.constants';
 import styles from './whatsapp.module.scss';
@@ -8,31 +8,22 @@ const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '';
 const WhatsAppBtn: FC = () => {
 	const [notification, setNotification] = useState<boolean>(false);
 	const CHAT_MESSAGE =
-		'¡Hola! ✨ \n\nSoy Reni, asistente comercial de Renúver 😊\n\n¿En qué puedo ayudarte?';
+		'¡Hola! ✨ \n\nSomos Renúver, estamos acá para acompañarte a buscar lo que querés. 😊\n\n ¿En qué podemos ayudarte?';
 
-	const sendNotification = (): void => {
-		setNotification(true);
-	};
-
-	useEffect((): (() => void) => {
-		const NOTIFICATION_AUDIO = new Audio(Sounds.NOTIFICATION);
-
-		const play = async (): Promise<void> => {
-			await NOTIFICATION_AUDIO.play();
-		};
-
+	useEffect(() => {
 		if (notification) {
-			play().catch((error) => {
-				console.error(error);
-			});
+			new Audio(Sounds.NOTIFICATION)
+				.play()
+				.then((data) => {
+					console.log(data);
+				})
+				.catch((error) => {
+					console.error(error);
+				});
 		}
-
-		return () => {
-			NOTIFICATION_AUDIO.pause();
-		};
 	}, [notification]);
 
-	if (WHATSAPP_NUMBER === undefined) return <></>;
+	if (WHATSAPP_NUMBER.length === 0) return <></>;
 
 	return (
 		<FloatingWhatsApp
@@ -49,7 +40,9 @@ const WhatsAppBtn: FC = () => {
 			chatboxHeight={350}
 			statusMessage={'Siempre disponibles para ayudarte'}
 			chatboxClassName={styles.container}
-			onNotification={sendNotification}
+			onNotification={() => {
+				setNotification(true);
+			}}
 		/>
 	);
 };

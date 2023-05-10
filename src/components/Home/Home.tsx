@@ -1,17 +1,21 @@
+import { type FC } from 'react';
+import { type ICategoriesProps } from '@/types';
 import BannerPrimary from './BannerPrimary';
 import BannerReasons from './BannerReasons';
 import Categories from './Categories';
-import BannerSteps from './BannerSteps';
+// import BannerSteps from "./BannerSteps";
 import BannerOpinion from './BannerOpinion';
 import BannerEco from './BannerEco';
+import BannerQuoter from './BannerQuoter';
 
-const Home = (): JSX.Element => {
+const Home: FC<ICategoriesProps> = ({ categories }) => {
 	return (
 		<>
 			<BannerPrimary />
 			<BannerReasons />
-			<Categories />
-			<BannerSteps />
+			<Categories categories={categories} />
+			{/* <BannerSteps /> */}
+			<BannerQuoter />
 			<BannerOpinion />
 			<BannerEco />
 		</>

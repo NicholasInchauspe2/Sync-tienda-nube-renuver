@@ -3,15 +3,24 @@ import Image from 'next/image';
 import { useScrollDirection } from 'react-use-scroll-direction';
 import { Icons } from '@/constants/assets.constants';
 import Search from '@/components/Search';
+import { API } from '@/constants/api.constants';
 import Menu from '../Menu';
 import styles from './navbar.module.scss';
 
-const Navbar: FC = (): JSX.Element => {
+const Navbar: FC = () => {
 	const [isOpenMenu, setIsOpenMenu] = useState(false);
 	const [lastScroll, setLastScroll] = useState('');
 	const [scrollY, setScrollY] = useState(0);
 
-	const handleClick = (): any => setIsOpenMenu(!isOpenMenu);
+	const handleClick = (): void => {
+		setIsOpenMenu(!isOpenMenu);
+	};
+
+	const handleSearch = (value: string): void => {
+		if (value.length > 0) {
+			window.location.href = API.TIENDA_NUBE_SEARCH + value;
+		}
+	};
 
 	const { isScrollingY, scrollDirection } = useScrollDirection();
 
@@ -31,11 +40,19 @@ const Navbar: FC = (): JSX.Element => {
 					<Image
 						src={Icons.LOGO}
 						alt="Renuver Logo"
+						priority
 						fill
-						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+						sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw"
 					/>
 				</figure>
-				<Search name="searchdesktop" variant="secundary" placeholder="Buscá por modelos" />
+				<Search
+					name="searchdesktop"
+					variant="secundary"
+					placeholder="Buscá por modelos"
+					handleSearch={handleSearch}
+				/>
 				<figure className={styles.login}>
 					<Image src={Icons.LOGIN} alt="login Logo" fill />
 				</figure>
@@ -50,7 +67,12 @@ const Navbar: FC = (): JSX.Element => {
 				<Menu isOpen={isOpenMenu} handleClick={handleClick} />
 			</div>
 			<nav className={styles.section2}>
-				<Search name="searchMobile" variant="primary" placeholder="Buscá por modelos" />
+				<Search
+					name="searchMobile"
+					variant="primary"
+					placeholder="Buscá por modelos"
+					handleSearch={handleSearch}
+				/>
 			</nav>
 		</header>
 	);

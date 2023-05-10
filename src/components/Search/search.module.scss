@@ -3,15 +3,18 @@
 .container {
     width: 100%;
     display: flex;
-
+    border-radius: get-vw(10px);
+    box-shadow: 0px 3px 10px $color-primary-bold;
+    
     @include responsive() {
         width: get-vw(730px, 'desktop');
-        width: auto;
-    }
+        width: auto;  
+        border-radius: get-vw(14px, "desktop");
+    } 
 }
 
 .primary {
-    select {
+    .dropdown {
         display: none;
     }
 
@@ -27,6 +30,10 @@
         }
         font-size: get-vw(16px);
         line-height: get-vw(19px);
+
+        &:focus + div {
+            border: 1px solid red;
+          }
     }
     
     button {
@@ -62,7 +69,7 @@
     }
 
    
-    select {
+    .dropdown {
         border: none;
         font-family: $secondary-font;
         border-radius: get-vw(14px, 'desktop') 0 0 get-vw(14px, 'desktop');
@@ -73,6 +80,10 @@
         line-height: get-vw(17px, 'desktop');
         text-align-last: center;
         border-right: get-vw(14px, 'desktop') solid transparent;
+
+        &:focus {
+            cursor: pointer;
+        }
     }
 
     input {
@@ -87,7 +98,8 @@
         font-size: get-vw(14px, 'desktop');
         line-height: get-vw(16px, 'desktop');
     }
-    button {
+
+    .searchButton {
         width: get-vw(53px, 'desktop');
         height: get-vw(45px, 'desktop');
         border-radius: 0 get-vw(14px, 'desktop') get-vw(14px, 'desktop') 0;
@@ -100,4 +112,15 @@
             height: get-vw(24px, 'desktop');
         }
     }
+}
+
+.focus {
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px $color-shadow-bold;
+
+}
+
+.focusOut {
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 3px 10px $color-primary-bold;
 }

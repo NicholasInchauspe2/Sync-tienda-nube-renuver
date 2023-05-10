@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Icons, Images } from '@/constants/assets.constants';
 import styles from './banner.module.scss';
 
-const BannerEco: FC = (): JSX.Element => (
+const BannerEco: FC = () => (
 	<section id={styles.container}>
 		<div className={styles.content}>
 			<figure className={styles.image}>

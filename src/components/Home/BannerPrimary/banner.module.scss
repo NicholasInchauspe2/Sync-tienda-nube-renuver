@@ -2,15 +2,15 @@
 
 #container {
     background: $color-primary;
-    height: get-vw(400px);
+    height: get-vw(310px);
     position: relative;
-    padding: get-vw(15px) get-vw(28px);
+    padding: get-vw(3px) get-vw(28px);
 
     @include responsive() {
-        padding: get-vw(90px, 'desktop') get-vw(120px, 'desktop');
-        height: get-vw(520px, 'desktop');
+        padding: get-vw(60px, 'desktop') get-vw(120px, 'desktop');
+        height: get-vw(450px, 'desktop');
     }
-
+    
     .image {
         position: absolute;
         bottom: 0;
@@ -27,40 +27,43 @@
     }
 
     h1 {
-        font-size: get-vw(25px);
-        line-height: get-vw(50px);
+        font-size: get-vw(27px);
+        line-height: get-vw(35px);
         font-weight: bold;
         color: $color-white;
         margin-bottom: get-vw(17px);
+        margin-top: get-vw(20px);
 
         @include responsive() {
-            font-size: get-vw(40px, 'desktop');
+            font-size: get-vw(45px, 'desktop');
             line-height: get-vw(50px, 'desktop');
+            margin-top: get-vw(0px, "desktop");
             margin-bottom: get-vw(23px, 'desktop');
+        }
+        
+        .letters {
+            color: $color-tertiary;
+        }
+        .cursor {
+            color: $color-white;
         }
     }
 
     p {
         font-family: $secondary-font;
-        width: get-vw(240px);
+        width: get-vw(350px);
         color: $color-white;
         font-size: get-vw(16px);
-        line-height: get-vw(35px);
-        margin-bottom: get-vw(40px);
+        line-height: get-vw(25px);
+        margin-bottom: get-vw(27px);
+        margin-top: get-vw(10px);
+
 
         @include responsive() {
             width: get-vw(690px, 'desktop');
             font-size: get-vw(20px, 'desktop');
             line-height: get-vw(35px, 'desktop');
-            margin-bottom: get-vw(35px, 'desktop');
-        }
-    }
-
-    button {
-        margin-left: get-vw(50px);
-
-        @include responsive() {
-            margin: 0;
+            margin-bottom: get-vw(50px, 'desktop');
         }
     }
 }
